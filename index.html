@@ -95,9 +95,21 @@
   .demo-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 14px; }
 
   /* who it's for */
-  .for { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; }
-  .for p { font-size: 16px; font-weight: 500; line-height: 1.55; }
-  .for .lbl { font-family: var(--serif); font-size: 21px; font-weight: 500; color: var(--navy); margin-right: 6px; }
+  .for { background: var(--navy); padding: 44px 0 48px; }
+  .for h2 { font-family: var(--sans); font-size: 16px; font-weight: 500; color: #B9C7DB; letter-spacing: 0; margin-bottom: 18px; }
+  .for ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; gap: 16px 0; }
+  .for li { font-family: var(--serif); font-size: 22px; line-height: 1.2; font-weight: 500; color: #fff; padding: 0 16px; border-left: 1px solid rgba(255,255,255,.22); white-space: nowrap; }
+  .for li:first-child { padding-left: 0; border-left: none; }
+  .for li:last-child { padding-right: 0; }
+  @media (max-width: 1140px) {
+    .for ul { grid-template-columns: repeat(3, auto); justify-content: start; gap: 18px 0; }
+    .for li { padding: 0 28px 0 0; border-left: none; }
+  }
+  @media (max-width: 720px) {
+    .for { padding: 36px 0 40px; }
+    .for ul { grid-template-columns: 1fr; gap: 12px; }
+    .for li { font-size: 24px; padding: 0; }
+  }
 
   /* sound familiar */
   .pain { background: var(--mist); padding: 80px 0; }
@@ -244,9 +256,16 @@
     </div>
   </section>
 
-  <section class="for" aria-label="Who it's for">
+  <section class="for" aria-labelledby="for-h">
     <div class="wrap">
-      <p><span class="lbl">Built for</span> mobile phlebotomy, mobile IV and wellness, specimen pickup and courier, drug and DNA testing, and in&#8209;home diagnostics.</p>
+      <h2 id="for-h">Built for</h2>
+      <ul>
+        <li>Mobile phlebotomy</li>
+        <li>Mobile IV and wellness</li>
+        <li>Specimen courier</li>
+        <li>Drug and DNA testing</li>
+        <li>In&#8209;home diagnostics</li>
+      </ul>
     </div>
   </section>
 
