@@ -61,11 +61,28 @@
   .top.scrolled { border-bottom-color: var(--line); }
   .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 24px; }
   .top img { height: 34px; width: auto; }
-  .top nav { display: flex; align-items: center; gap: 28px; }
-  .top nav a { text-decoration: none; color: var(--ink); font-size: 15px; font-weight: 500; }
-  .top nav a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 4px; }
-  .top nav .btn { color: #fff; padding: 10px 18px; font-size: 15px; }
-  .top nav .btn:hover { text-decoration: none; }
+  .top .right nav { display: flex; align-items: center; gap: 28px; }
+  .top .right nav a { text-decoration: none; color: var(--ink); font-size: 15px; font-weight: 500; }
+  .top .right nav a:hover { color: var(--navy); text-decoration: underline; text-underline-offset: 4px; }
+  .top .right nav .btn { color: #fff; padding: 10px 18px; font-size: 15px; }
+  .top .right nav .btn:hover { text-decoration: none; }
+  .top .right { display: flex; align-items: center; gap: 10px; }
+  section[id] { scroll-margin-top: 84px; }
+
+  /* phone menu */
+  .menu-btn { display: none; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border: 2px solid var(--navy); border-radius: 999px; background: #fff; color: var(--navy); font: 600 15px var(--sans); cursor: pointer; }
+  .menu-btn .bars { width: 16px; height: 12px; position: relative; }
+  .menu-btn .bars span { position: absolute; left: 0; right: 0; height: 2px; background: currentColor; border-radius: 2px; transition: transform .2s ease, opacity .2s ease; }
+  .menu-btn .bars span:nth-child(1) { top: 0; } .menu-btn .bars span:nth-child(2) { top: 5px; } .menu-btn .bars span:nth-child(3) { top: 10px; }
+  .menu-btn[aria-expanded="true"] .bars span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] .bars span:nth-child(2) { opacity: 0; }
+  .menu-btn[aria-expanded="true"] .bars span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+  @media (prefers-reduced-motion: reduce) { .menu-btn .bars span { transition: none; } }
+  .mnav { position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 18px 30px -18px rgba(5,32,75,.35); padding: 4px 16px 20px; }
+  .mnav[hidden] { display: none; }
+  .mnav a { display: block; padding: 14px 0; border-top: 1px solid var(--line); font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--navy); text-decoration: none; }
+  .mnav a:first-child { border-top: none; }
+  .mnav .btn { margin-top: 12px; text-align: center; font-family: var(--sans); font-size: 16px; color: #fff; border-top: 2px solid var(--navy); }
 
   /* hero */
   .hero { padding: 72px 0 96px; }
@@ -198,7 +215,8 @@
   @media (max-width: 720px) {
     body { font-size: 16px; }
     .wrap { padding: 0 16px; }
-    .top nav a:not(.btn) { display: none; }
+    .top .right nav { display: none; }
+    .menu-btn { display: inline-flex; }
     .top img { height: 28px; }
     .pain ul, .start ol, .yours ul, .feat dl { grid-template-columns: 1fr; }
     .rack { grid-template-columns: 1fr; row-gap: 0; }
@@ -217,13 +235,24 @@
 <header class="top" id="top">
   <div class="wrap">
     <a href="#top" aria-label="Topsail Solutions home"><img src="assets/topsail-horizontal-navy.svg" alt="Topsail Solutions" width="210" height="34"></a>
-    <nav aria-label="Main">
-      <a href="#visit">How it works</a>
-      <a href="#included">What's included</a>
-      <a href="#about">About</a>
-      <a class="btn btn-solid" href="mailto:bmichaels@topsailsolutions.com?subject=Book%20a%20call%20with%20Topsail">Book a call</a>
-    </nav>
+    <div class="right">
+      <nav aria-label="Main">
+        <a href="#visit">How it works</a>
+        <a href="#included">What's included</a>
+        <a href="#about">About</a>
+        <a class="btn btn-solid" href="mailto:bmichaels@topsailsolutions.com?subject=Book%20a%20call%20with%20Topsail">Book a call</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="lbl">Menu</span></button>
+    </div>
   </div>
+  <nav class="mnav" id="mnav" aria-label="Sections" hidden>
+    <a href="#visit">How it works</a>
+    <a href="#included">What's included</a>
+    <a href="#tools">Built on Google</a>
+    <a href="#start">How we get started</a>
+    <a href="#about">About</a>
+    <a class="btn btn-solid" href="mailto:bmichaels@topsailsolutions.com?subject=Book%20a%20call%20with%20Topsail">Book a call</a>
+  </nav>
 </header>
 
 <main>
@@ -319,7 +348,7 @@
     </div>
   </section>
 
-  <section class="yours" aria-labelledby="yours-h">
+  <section class="yours" id="tools" aria-labelledby="yours-h">
     <div class="wrap">
       <h2 id="yours-h">Built on tools you already have</h2>
       <ul>
@@ -331,7 +360,7 @@
     </div>
   </section>
 
-  <section class="start" aria-labelledby="start-h">
+  <section class="start" id="start" aria-labelledby="start-h">
     <div class="wrap">
       <h2 id="start-h">How we get started</h2>
       <ol>
@@ -385,6 +414,14 @@
     var top = document.getElementById('top');
     function mark() { top.classList.toggle('scrolled', window.scrollY > 8); }
     window.addEventListener('scroll', mark, { passive: true }); mark();
+
+    // phone menu: opens under the header, closes on a choice, Escape, or widening the screen
+    var btn = top.querySelector('.menu-btn'), panel = document.getElementById('mnav'), lbl = btn.querySelector('.lbl');
+    function set(open) { btn.setAttribute('aria-expanded', open ? 'true' : 'false'); panel.hidden = !open; lbl.textContent = open ? 'Close' : 'Menu'; }
+    btn.addEventListener('click', function () { set(panel.hidden); });
+    panel.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { set(false); btn.focus(); } });
+    window.addEventListener('resize', function () { if (window.innerWidth > 720 && !panel.hidden) set(false); });
   })();
 </script>
 </body>
