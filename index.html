@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Topsail Solutions | Operations systems for mobile phlebotomy and IV businesses</title>
-<meta name="description" content="Topsail builds the booking, dispatch and lab-tracking system for mobile phlebotomy and mobile IV businesses, running in your own Google account.">
+<title>Topsail Solutions | Grow your mobile health business, not your payroll</title>
+<meta name="description" content="Topsail builds the booking, dispatch and lab-tracking system for mobile phlebotomy, mobile IV, specimen courier, drug testing and in-home diagnostics businesses, running in your own Google account.">
 <meta property="og:title" content="Topsail Solutions">
-<meta property="og:description" content="Booking, dispatch and lab tracking for mobile phlebotomy and IV businesses. More speed, same crew.">
+<meta property="og:description" content="Scheduling, reminders, routes and lab tracking for mobile phlebotomy and IV businesses, so you can take on more visits without adding office staff.">
 <meta property="og:image" content="https://topsailsolutions.com/assets/og-image.png">
 <meta property="og:url" content="https://topsailsolutions.com/">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -24,7 +24,7 @@
     --paper: #FFFFFF;
     --mist: #EEF3F8;
     --line: #D6DFE9;
-    /* tube-top colours: the same ones the Ops Engine uses for visit status */
+    /* tube-top colours: the same ones the system uses for visit status */
     --cap-gold: #D9A92B;
     --cap-lav: #8C78C4;
     --cap-royal: #3466C2;
@@ -75,7 +75,7 @@
   .hero .ctas { display: flex; gap: 14px; flex-wrap: wrap; }
   .hero .who { margin-top: 30px; font-size: 15px; color: var(--muted); }
 
-  /* the phone: a phleb's morning in the Ops Engine (demo data) */
+  /* the phone: a phleb's morning in the system (demo data) */
   .phone { justify-self: center; width: 320px; background: var(--navy); border-radius: 44px; padding: 12px; box-shadow: 0 30px 60px -28px rgba(5,32,75,.55); }
   .screen { background: #F6F8FA; border-radius: 34px; padding: 26px 18px 20px; min-height: 560px; }
   .screen .hello { font-family: var(--serif); font-size: 25px; color: var(--navy); font-weight: 600; line-height: 1.15; }
@@ -94,9 +94,19 @@
   .cap::after { content: ""; position: absolute; left: 3px; right: 3px; bottom: -6px; height: 6px; border-radius: 0 0 3px 3px; background: #E3E9EF; }
   .demo-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 14px; }
 
+  /* who it's for */
+  .for { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 26px 0; }
+  .for .wrap { display: flex; align-items: baseline; gap: 14px 32px; flex-wrap: wrap; }
+  .for h2 { font-size: 21px; line-height: 1.3; font-weight: 500; flex: none; }
+  .for ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; flex: 1 1 560px; }
+  .for li { display: inline-flex; align-items: center; gap: 9px; font-size: 16px; font-weight: 500; }
+  .for .cap { width: 11px; height: 14px; }
+  .for .cap::after { bottom: -5px; height: 5px; }
+
   /* sound familiar */
   .pain { background: var(--mist); padding: 80px 0; }
-  .pain h2 { max-width: 15em; margin-bottom: 36px; }
+  .pain h2 { max-width: 15em; margin-bottom: 14px; }
+  .pain-intro { color: var(--muted); font-size: 19px; max-width: 34em; margin-bottom: 40px; }
   .pain ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
   .pain li { border-top: 2px solid var(--navy); padding-top: 18px; }
   .pain li p { color: var(--muted); margin-top: 8px; }
@@ -144,7 +154,7 @@
   .about { padding: 0 0 104px; }
   .about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; border-top: 1px solid var(--line); padding-top: 96px; }
   .about p + p { margin-top: 16px; }
-  .about .name { color: var(--muted); }
+  .about .role { color: var(--muted); font-weight: 500; margin: 8px 0 22px; }
   .sailnote { background: var(--mist); border-radius: 18px; padding: 30px; }
   .sailnote .markbox { width: 64px; height: auto; margin-bottom: 18px; background: var(--navy); border-radius: 14px; padding: 10px; }
   .sailnote p { font-family: var(--serif); font-size: 23px; line-height: 1.4; color: var(--navy); }
@@ -211,8 +221,8 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <h1>More speed, same crew.</h1>
-        <p class="lede">Topsail builds the booking, dispatch and lab-tracking system for mobile phlebotomy and IV businesses. Patients get confirmed and reminded, each phleb's route is on their phone by morning, and nothing falls through between the draw and the results.</p>
+        <h1>Grow your business, not your payroll.</h1>
+        <p class="lede">Topsail sets up the system that handles scheduling, patient reminders, daily routes and lab tracking for mobile phlebotomy and IV businesses, so your team can take on more visits without adding office staff.</p>
         <div class="ctas">
           <a class="btn btn-solid" href="mailto:bmichaels@topsailsolutions.com?subject=Book%20a%20call%20with%20Topsail">Book a call</a>
           <a class="btn btn-line" href="#visit">See how it works</a>
@@ -237,11 +247,25 @@
     </div>
   </section>
 
+  <section class="for" aria-labelledby="for-h">
+    <div class="wrap">
+      <h2 id="for-h">Built for</h2>
+      <ul>
+        <li><span class="cap" style="--c:var(--cap-lav)"></span>Mobile phlebotomy</li>
+        <li><span class="cap" style="--c:var(--cap-royal)"></span>Mobile IV and wellness</li>
+        <li><span class="cap" style="--c:var(--cap-gray)"></span>Specimen pickup and courier</li>
+        <li><span class="cap" style="--c:var(--cap-gold)"></span>Drug testing and DNA collection</li>
+        <li><span class="cap" style="--c:var(--cap-teal)"></span>In-home diagnostics</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="pain" aria-labelledby="pain-h">
     <div class="wrap">
-      <h2 id="pain-h">If your schedule lives in texts, a notebook and your memory, this is for you.</h2>
+      <h2 id="pain-h">Your schedule, orders and team, all in one place.</h2>
+      <p class="pain-intro">Even with a booking tool, the work around each visit usually still lands on you. Topsail brings it together and handles the follow-up.</p>
       <ul>
-        <li><h3>Scheduling back and forth</h3><p>Confirming times, sending reminders and answering "are you still coming?" eats hours every week.</p></li>
+        <li><h3>Confirmations and reminders</h3><p>Confirming times, sending reminders and answering "are you still coming?" eats hours every week.</p></li>
         <li><h3>Chasing orders and results</h3><p>A missing lab order or a result nobody followed up on is how patients and referring offices lose trust.</p></li>
         <li><h3>Who goes where</h3><p>Every morning someone works out the routes, then texts each phleb their stops and details.</p></li>
       </ul>
@@ -269,7 +293,7 @@
     <div class="wrap">
       <div class="intro">
         <h2 id="feat-h">What's included</h2>
-        <p>The Ops Engine for Mobile Health, set up with your services, prices, team, hours and service area.</p>
+        <p>Everything you need to run your business, in one place, set up with your services, prices, team, hours and service area.</p>
       </div>
       <dl>
         <div><dt>Bookings in one place</dt><dd>Requests from your website, booking tool or phone calls land on one schedule, with confirmations and reminders sent for you.</dd></div>
@@ -312,10 +336,10 @@
   <section class="about" id="about" aria-labelledby="about-h">
     <div class="wrap">
       <div>
-        <h2 id="about-h">Who's behind Topsail</h2>
-        <p style="margin-top:20px">I'm Ben Michaels. For the past few years I've built the operations system for a mobile blood draw company: orders, staff, routes and lab tracking.</p>
-        <p>Topsail takes what worked there and sets it up for mobile phlebotomy and IV businesses that are too busy running visits to build their own.</p>
-        <p class="name">Ben Michaels, Operations Specialist</p>
+        <h2 id="about-h">Meet Ben Michaels</h2>
+        <p class="role">Operations Specialist, Topsail Solutions</p>
+        <p>Ben has spent the past few years building and running the operations system behind a mobile blood draw company: bookings, staff schedules, routes, lab orders and results. He knows where the time goes in a mobile health business, and which parts can run on their own.</p>
+        <p>He started Topsail to bring that experience to mobile phlebotomy and IV businesses, so owners can take on more visits without adding office staff, and spend their time on patients instead of logistics.</p>
       </div>
       <div class="sailnote">
         <img src="assets/topsail-mark-white.svg" alt="" class="markbox">
