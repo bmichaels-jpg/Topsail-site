@@ -151,6 +151,59 @@
   @media (max-width: 960px) { .svc-grid { grid-template-columns: 1fr; max-width: 560px; } }
   @media (max-width: 720px) { .svc { padding: 64px 0; } }
 
+  /* examples */
+  .ex { background: #fff; padding: 96px 0; border-top: 1px solid var(--line); }
+  .ex > .wrap > header { max-width: 40em; margin-bottom: 56px; }
+  .ex > .wrap > header p { margin-top: 16px; }
+  .ex-row { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: center; padding: 48px 0; border-top: 1px solid var(--line); }
+  .ex-row:first-of-type { border-top: none; padding-top: 0; }
+  .ex-row .tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .ex-row .tag i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+  .ex-row h3 { font-size: 30px; font-weight: 600; margin-bottom: 12px; }
+  .ex-row .txt p { color: var(--muted); }
+  .ex-row .txt ul { margin: 18px 0 0; padding: 0; list-style: none; }
+  .ex-row .txt li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px; }
+  .ex-row .txt li b { color: var(--navy); font-weight: 600; }
+  .demo-tag { font-size: 12px; color: var(--muted); margin-top: 10px; }
+  /* ops mock */
+  .mock { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 24px 50px -30px rgba(5,32,75,.45); overflow: hidden; }
+  .mock .bar { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; background: var(--navy); color: #fff; font-size: 14px; }
+  .mock .bar b { font-family: var(--serif); font-size: 19px; font-weight: 600; }
+  .mock .kpis { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+  .mock .kpis div { padding: 14px 20px; border-left: 1px solid var(--line); }
+  .mock .kpis div:first-child { border-left: none; }
+  .mock .kpis b { display: block; font-family: var(--serif); font-size: 28px; color: var(--navy); line-height: 1.1; }
+  .mock .kpis span { font-size: 13px; color: var(--muted); }
+  .alerts { list-style: none; margin: 0; padding: 6px 0; }
+  .alerts li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: start; padding: 12px 20px; border-top: 1px solid #EEF2F6; font-size: 15px; line-height: 1.4; }
+  .alerts li:first-child { border-top: none; }
+  .alerts .lvl { font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; text-align: center; padding: 4px 0; border-radius: 6px; }
+  .lvl.high { background: #FBE7E7; color: #A12C2C; } .lvl.med { background: #FCF1D9; color: #8A5A07; } .lvl.low { background: #E6F2EA; color: #2D6E48; }
+  .alerts small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+  /* automation mock */
+  .msgs { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+  .bubble-card { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 18px; box-shadow: 0 24px 50px -30px rgba(5,32,75,.45); }
+  .bubble-card .who { font-size: 13px; color: var(--muted); margin-bottom: 10px; display: flex; justify-content: space-between; }
+  .bubble { background: #E9EEF4; border-radius: 18px 18px 18px 6px; padding: 12px 14px; font-size: 15px; line-height: 1.45; }
+  .bubble + .bubble { margin-top: 8px; }
+  .bubble.me { background: var(--navy); color: #fff; border-radius: 18px 18px 6px 18px; margin-left: 28px; }
+  .bubble a { color: inherit; font-weight: 600; }
+  .mail .subj { font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+  .mail p { font-size: 14.5px; color: var(--muted); line-height: 1.5; }
+  .mail .quote { border-left: 3px solid var(--cap-gold); padding: 6px 12px; margin: 10px 0; background: #FBF7EC; color: var(--ink); font-size: 14.5px; border-radius: 0 8px 8px 0; }
+  /* web samples */
+  .sites { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .site { display: block; text-decoration: none; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 24px 50px -30px rgba(5,32,75,.45); transition: transform .15s ease; }
+  .site:hover { transform: translateY(-3px); }
+  .site .chrome { height: 26px; background: #ECEFF3; display: flex; align-items: center; gap: 6px; padding: 0 12px; }
+  .site .chrome i { width: 8px; height: 8px; border-radius: 50%; background: #C9D1DA; }
+  .site img { width: 100%; height: auto; aspect-ratio: 8/5; object-fit: cover; }
+  .site .cap2 { padding: 12px 16px 14px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .site .cap2 b { font-size: 15.5px; } .site .cap2 span { font-size: 14px; color: var(--navy); font-weight: 600; white-space: nowrap; }
+  @media (prefers-reduced-motion: reduce) { .site { transition: none; } }
+  @media (max-width: 960px) { .ex-row { grid-template-columns: 1fr; gap: 32px; } }
+  @media (max-width: 720px) { .ex { padding: 64px 0; } .msgs, .sites { grid-template-columns: 1fr; } .mock .kpis b { font-size: 22px; } }
+
   /* sound familiar */
   .pain { background: var(--mist); padding: 80px 0; }
   .pain h2 { max-width: 15em; margin-bottom: 14px; }
@@ -261,6 +314,7 @@
     <div class="right">
       <nav aria-label="Main">
         <a href="#services">Services</a>
+        <a href="#examples">Examples</a>
         <a href="#visit">How it works</a>
         <a href="#included">What's included</a>
         <a href="#about">About</a>
@@ -271,6 +325,7 @@
   </div>
   <nav class="mnav" id="mnav" aria-label="Sections" hidden>
     <a href="#services">Services</a>
+    <a href="#examples">Examples</a>
     <a href="#visit">How it works</a>
     <a href="#included">What's included</a>
     <a href="#tools">Built on Google</a>
@@ -341,7 +396,7 @@
             <li>A live dashboard and owner insights</li>
           </ul>
           <p class="fit"><b>Built for</b> mobile phlebotomy, IV, specimen courier and testing businesses.</p>
-          <a class="more" href="#visit">See how it works &rarr;</a>
+          <a class="more" href="#ex-ops">See an example &rarr;</a>
         </article>
         <article class="svc-card" style="--c:var(--cap-green)">
           <div class="tube" style="--c:var(--cap-green)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
@@ -354,7 +409,7 @@
             <li>Reports and reminders that send themselves</li>
           </ul>
           <p class="fit"><b>Built for</b> any small business that runs on Google.</p>
-          <a class="more" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Talk through an idea &rarr;</a>
+          <a class="more" href="#ex-auto">See an example &rarr;</a>
         </article>
         <article class="svc-card" style="--c:var(--cap-gold)">
           <div class="tube" style="--c:var(--cap-gold)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
@@ -367,8 +422,102 @@
             <li>Hosting and small edits included</li>
           </ul>
           <p class="fit"><b>Built for</b> local service businesses, on the domain you own.</p>
-          <a class="more" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Ask about a free preview &rarr;</a>
+          <a class="more" href="#ex-web">See sample sites &rarr;</a>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ex" id="examples" aria-labelledby="ex-h">
+    <div class="wrap">
+      <header>
+        <h2 id="ex-h">See it in action</h2>
+        <p class="lede">A look at what each service looks like day to day. Everything here uses made-up names and demo data.</p>
+      </header>
+
+      <div class="ex-row" id="ex-ops">
+        <div class="txt">
+          <div class="tag" style="--c:var(--cap-royal)"><i></i>Operations systems</div>
+          <h3>Your morning check, done before you're up</h3>
+          <p>Every morning the system looks at every visit and tells you what needs attention, so problems get fixed before a patient or ordering office has to call you.</p>
+          <ul>
+            <li><b>Visits today</b> and who's assigned to each one</li>
+            <li><b>Alerts</b> for late results, missing lab orders and unassigned visits</li>
+            <li><b>Routes</b> sent to each team member's phone</li>
+          </ul>
+        </div>
+        <div>
+          <div class="mock" role="img" aria-label="Example dashboard with today's visits and four alerts, using demo data">
+            <div class="bar" aria-hidden="true"><b>Good morning</b><span>Tuesday, 6:00 AM</span></div>
+            <div class="kpis" aria-hidden="true">
+              <div><b>14</b><span>Visits today</span></div>
+              <div><b>2</b><span>Not assigned</span></div>
+              <div><b>4</b><span>Open alerts</span></div>
+            </div>
+            <ul class="alerts" aria-hidden="true">
+              <li><span class="lvl high">High</span><span>Results 2 days late at Labcorp<small>Robert Hale · tracking number on file</small></span></li>
+              <li><span class="lvl high">High</span><span>No lab order yet for Thursday's draw<small>Angela Brooks · reminder sent to her provider</small></span></li>
+              <li><span class="lvl med">Medium</span><span>Specimen collected, drop-off not logged<small>Luis Moreno · collected yesterday 9:40 AM</small></span></li>
+              <li><span class="lvl low">Low</span><span>2 visits tomorrow have no one assigned<small>Pick who goes from the Visits tab</small></span></li>
+            </ul>
+          </div>
+          <p class="demo-tag">Demo data</p>
+        </div>
+      </div>
+
+      <div class="ex-row" id="ex-auto">
+        <div class="txt">
+          <div class="tag" style="--c:var(--cap-green)"><i></i>Automation</div>
+          <h3>Review requests that send themselves</h3>
+          <p>A couple of hours after each job, the customer gets a short thank-you with your Google review link. If they're unhappy, their reply comes to you instead of Google.</p>
+          <ul>
+            <li><b>New form entry</b> → added to your sheet, confirmation emailed</li>
+            <li><b>Every Monday</b> → last week's jobs and revenue in your inbox</li>
+            <li><b>Unpaid invoice</b> → a polite reminder after 7 days</li>
+          </ul>
+        </div>
+        <div>
+          <div class="msgs" aria-hidden="true">
+            <div class="bubble-card">
+              <div class="who"><span>Text to the customer</span><span>2 hrs after the job</span></div>
+              <div class="bubble">Hi Maria, thanks for choosing Northstar today! If you have a minute, a quick Google review would mean a lot: <a>g.page/review</a></div>
+              <div class="bubble me">Done! The car looks brand new.</div>
+            </div>
+            <div class="bubble-card mail">
+              <div class="who"><span>Email to the owner</span><span>Needs attention</span></div>
+              <div class="subj">A customer replied to your review request</div>
+              <p>James Carter wrote back:</p>
+              <div class="quote">"Interior was great but there's still a spot on the hood."</div>
+              <p>This went to you, not Google, so you can make it right.</p>
+            </div>
+          </div>
+          <p class="demo-tag">Made-up names</p>
+        </div>
+      </div>
+
+      <div class="ex-row" id="ex-web">
+        <div class="txt">
+          <div class="tag" style="--c:var(--cap-gold)"><i></i>Web design</div>
+          <h3>Sample websites</h3>
+          <p>Two sample sites for made-up businesses. Click either one to open the full page, and try it on your phone too.</p>
+          <ul>
+            <li><b>Services and prices</b> up front</li>
+            <li><b>Call and Book</b> buttons that stay on screen on phones</li>
+            <li><b>Google rating</b> with a link to your reviews</li>
+          </ul>
+        </div>
+        <div class="sites">
+          <a class="site" href="samples/kestrel-mobile-lab.html" target="_blank" rel="noopener">
+            <div class="chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="assets/samples/lab.jpg" alt="Sample website for Kestrel Mobile Lab, a made-up mobile phlebotomy business" width="960" height="600" loading="lazy">
+            <div class="cap2"><b>Kestrel Mobile Lab</b><span>Open sample &rarr;</span></div>
+          </a>
+          <a class="site" href="samples/northstar-mobile-detailing.html" target="_blank" rel="noopener">
+            <div class="chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="assets/samples/detail.jpg" alt="Sample website for Northstar Mobile Detailing, a made-up car detailing business" width="960" height="600" loading="lazy">
+            <div class="cap2"><b>Northstar Mobile Detailing</b><span>Open sample &rarr;</span></div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
