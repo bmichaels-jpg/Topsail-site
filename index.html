@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Topsail Solutions | Grow your mobile health business, not your payroll</title>
-<meta name="description" content="Topsail builds the booking, dispatch and lab-tracking system for mobile phlebotomy, mobile IV, specimen courier, drug testing and in-home diagnostics businesses, running in your own Google account.">
+<title>Topsail Solutions | Operations systems, automation and web design</title>
+<meta name="description" content="Topsail builds operations systems for mobile health businesses, automations that run in your own Google account, and clean, fast websites for local service businesses.">
 <meta property="og:title" content="Topsail Solutions">
 <meta property="og:description" content="Scheduling, reminders, routes and lab tracking for mobile phlebotomy and IV businesses, so you can take on more visits without adding office staff.">
 <meta property="og:image" content="https://topsailsolutions.com/assets/og-image.png">
@@ -128,6 +128,29 @@
     .for li { font-size: 24px; padding: 0; }
   }
 
+  /* services */
+  .svc { padding: 96px 0 88px; }
+  .svc header { max-width: 40em; margin-bottom: 48px; }
+  .svc header p { margin-top: 16px; }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .svc-card { border: 1px solid var(--line); border-radius: 22px; padding: 30px 28px 28px; display: flex; flex-direction: column; background: #fff; }
+  .svc-card .tube { width: 24px; height: 58px; margin-bottom: 20px; }
+  .svc-card .tube .top-c { height: 21px; }
+  .svc-card .tube .glass { top: 19px; }
+  .svc-card h3 { font-size: 27px; font-weight: 600; margin-bottom: 10px; }
+  .svc-card .what { color: var(--muted); margin-bottom: 18px; }
+  .svc-card ul { list-style: none; margin: 0 0 22px; padding: 0; }
+  .svc-card li { position: relative; padding-left: 22px; margin-top: 8px; font-size: 16px; line-height: 1.45; }
+  .svc-card li::before { content: ""; position: absolute; left: 0; top: .55em; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .svc-card .fit { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); font-size: 15px; color: var(--muted); }
+  .svc-card .fit b { color: var(--ink); font-weight: 600; }
+  .svc-card .more { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .svc-card .more:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .svc-cta { margin-top: 40px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .svc-cta p { color: var(--muted); }
+  @media (max-width: 960px) { .svc-grid { grid-template-columns: 1fr; max-width: 560px; } }
+  @media (max-width: 720px) { .svc { padding: 64px 0; } }
+
   /* sound familiar */
   .pain { background: var(--mist); padding: 80px 0; }
   .pain h2 { max-width: 15em; margin-bottom: 14px; }
@@ -237,6 +260,7 @@
     <a href="#top" aria-label="Topsail Solutions home"><img src="assets/topsail-horizontal-navy.svg" alt="Topsail Solutions" width="210" height="34"></a>
     <div class="right">
       <nav aria-label="Main">
+        <a href="#services">Services</a>
         <a href="#visit">How it works</a>
         <a href="#included">What's included</a>
         <a href="#about">About</a>
@@ -246,6 +270,7 @@
     </div>
   </div>
   <nav class="mnav" id="mnav" aria-label="Sections" hidden>
+    <a href="#services">Services</a>
     <a href="#visit">How it works</a>
     <a href="#included">What's included</a>
     <a href="#tools">Built on Google</a>
@@ -263,7 +288,7 @@
         <p class="lede">Topsail sets up the system that handles scheduling, patient reminders, daily routes and lab tracking for mobile phlebotomy and IV businesses, so your team can take on more visits without adding office staff.</p>
         <div class="ctas">
           <a class="btn btn-solid" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Book a call</a>
-          <a class="btn btn-line" href="#visit">See how it works</a>
+          <a class="btn btn-line" href="#services">See our services</a>
         </div>
         <p class="who">Runs in your own Google account. No new software for your team to learn.</p>
       </div>
@@ -295,6 +320,56 @@
         <li>Drug and DNA testing</li>
         <li>In&#8209;home diagnostics</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="svc" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <header>
+        <h2 id="svc-h">What we do</h2>
+        <p class="lede">Three ways to take work off your plate. Use one, or put them together.</p>
+      </header>
+      <div class="svc-grid">
+        <article class="svc-card" style="--c:var(--cap-royal)">
+          <div class="tube" style="--c:var(--cap-royal)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
+          <h3>Operations systems</h3>
+          <p class="what">Your schedule, team, routes and lab tracking in one system that runs in your own Google account.</p>
+          <ul>
+            <li>Bookings, confirmations and reminders</li>
+            <li>Each team member's route on their phone</li>
+            <li>Lab orders, drop-offs and results tracked</li>
+            <li>A live dashboard and owner insights</li>
+          </ul>
+          <p class="fit"><b>Built for</b> mobile phlebotomy, IV, specimen courier and testing businesses.</p>
+          <a class="more" href="#visit">See how it works &rarr;</a>
+        </article>
+        <article class="svc-card" style="--c:var(--cap-green)">
+          <div class="tube" style="--c:var(--cap-green)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
+          <h3>Automation</h3>
+          <p class="what">Repetitive office work handled for you, using the Google tools you already have.</p>
+          <ul>
+            <li>Google review requests after every job</li>
+            <li>Unhappy replies come to you, not Google</li>
+            <li>Custom Sheets, Gmail and Forms automations</li>
+            <li>Reports and reminders that send themselves</li>
+          </ul>
+          <p class="fit"><b>Built for</b> any small business that runs on Google.</p>
+          <a class="more" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Talk through an idea &rarr;</a>
+        </article>
+        <article class="svc-card" style="--c:var(--cap-gold)">
+          <div class="tube" style="--c:var(--cap-gold)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
+          <h3>Web design</h3>
+          <p class="what">A clean, fast website that turns visitors into calls and bookings, live in about a week.</p>
+          <ul>
+            <li>Services, prices and hours up front</li>
+            <li>Call and Book buttons that work on phones</li>
+            <li>Your Google rating, with a link to your reviews</li>
+            <li>Hosting and small edits included</li>
+          </ul>
+          <p class="fit"><b>Built for</b> local service businesses, on the domain you own.</p>
+          <a class="more" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Ask about a free preview &rarr;</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -340,10 +415,6 @@
         <div><dt>Missed draws handled</dt><dd>Log why a draw didn't happen. The re-attempt gets booked and the facility or ordering office is told.</dd></div>
         <div><dt>Facility program</dt><dd>Assisted living and nursing facilities get a status page and a monthly report of every draw for their residents.</dd></div>
         <div><dt>Owner insights</dt><dd>Revenue, visits, collection rate, busiest days and where your patients come from, updated as you work.</dd></div>
-        <div class="also">
-          <h3>Also available: Google review requests</h3>
-          <p>A friendly thank-you with your review link goes out a few hours after each visit, so more happy patients leave a review.</p>
-        </div>
       </dl>
     </div>
   </section>
@@ -377,7 +448,7 @@
         <h2 id="about-h">Meet Ben Michaels</h2>
         <p class="role">Operations Specialist, Topsail Solutions</p>
         <p>Ben has spent the past few years building and running the operations system behind a mobile blood draw company: bookings, staff schedules, routes, lab orders and results. He knows where the time goes in a mobile health business, and which parts can run on their own.</p>
-        <p>He started Topsail to bring that experience to mobile phlebotomy and IV businesses, so owners can take on more visits without adding office staff, and spend their time on patients instead of logistics.</p>
+        <p>He started Topsail to bring that experience to mobile phlebotomy and IV businesses, so owners can take on more visits without adding office staff, and spend their time on patients instead of logistics. He also builds custom Google automations and websites for small businesses of all kinds.</p>
       </div>
       <div class="sailnote">
         <img src="assets/topsail-mark-white.svg" alt="" class="markbox">
