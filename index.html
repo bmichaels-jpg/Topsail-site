@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Topsail Solutions | Operations systems, automation, websites and SEO</title>
-<meta name="description" content="Topsail builds operations systems, Google automations, websites and SEO for small businesses, so you can grow without adding office staff.">
+<meta name="description" content="Topsail builds operations systems, Google automations, fast lead replies, websites and SEO for small businesses, so you can grow without adding office staff.">
 <meta property="og:title" content="Topsail Solutions">
-<meta property="og:description" content="Operations systems, Google automations, websites and SEO for small businesses, so you can grow without adding office staff.">
+<meta property="og:description" content="Operations systems, Google automations, fast lead replies, websites and SEO for small businesses, so you can grow without adding office staff.">
 <meta property="og:image" content="https://topsailsolutions.com/assets/og-image.png">
 <meta property="og:url" content="https://topsailsolutions.com/">
 <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
   "url": "https://topsailsolutions.com/",
   "logo": "https://topsailsolutions.com/assets/apple-touch-icon-180.png",
   "image": "https://topsailsolutions.com/assets/og-image.png",
-  "description": "Operations systems, automations that run in your own Google account, websites, and SEO and marketing for small businesses.",
+  "description": "Operations systems, automations that run in your own Google account, fast lead replies, websites, and SEO and marketing for small businesses.",
   "email": "bmichaels@topsailsolutions.com",
   "sameAs": [
     "https://www.linkedin.com/company/147032042/"
@@ -42,6 +42,7 @@
     "Google review automation",
     "Google Workspace automation",
     "Google Apps Script",
+    "Lead response automation",
     "Small business websites",
     "Local SEO",
     "Email marketing",
@@ -67,6 +68,15 @@
           "name": "Automation",
           "description": "Google review requests, custom Sheets, Gmail and Forms automations, and reports that send themselves.",
           "url": "https://topsailsolutions.com/automation/"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Lead replies",
+          "description": "Every new lead from a website form, Google Form or email gets a reply drafted in the owner's voice within minutes, sent once the owner approves it.",
+          "url": "https://topsailsolutions.com/lead-replies/"
         }
       },
       {
@@ -228,7 +238,21 @@
   .svc-card .fit b { color: var(--ink); font-weight: 600; }
   .svc-card .more { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 15px; text-decoration: none; }
   .svc-card .more:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-grid { grid-template-columns: repeat(3, 1fr); }
+  .svc-card.start-here { background: var(--mist); border-color: var(--mist); justify-content: center; }
+  .svc-card.start-here .what { margin-bottom: 24px; }
+  .svc-card.start-here .btn { align-self: flex-start; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  /* lead replies mock */
+  .leadmock { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+  .leadmock dl { margin: 0; display: grid; grid-template-columns: 74px 1fr; gap: 6px 10px; font-size: 14.5px; }
+  .leadmock dt { color: var(--muted); }
+  .leadmock dd { margin: 0; font-weight: 500; }
+  .leadmock .urg { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 6px; background: #FCF1D9; color: #8A5A07; }
+  .leadmock .draft { font-size: 14.5px; line-height: 1.5; background: #F4F1FA; border-left: 3px solid var(--cap-lav); border-radius: 0 8px 8px 0; padding: 10px 12px; }
+  .leadmock .approve { display: inline-block; margin-top: 12px; background: var(--navy); color: #fff; font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: 999px; }
+  .leadmock .edit { display: inline-block; margin: 12px 0 0 10px; font-size: 14px; color: var(--muted); }
+  @media (max-width: 720px) { .leadmock { grid-template-columns: 1fr; } }
   .svc-card .links2 { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 12px; }
   .svc-card .links2 .more { margin-top: 0; }
   footer .svcs { display: flex; gap: 20px; flex-wrap: wrap; width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.18); }
@@ -426,7 +450,7 @@
     <div class="wrap">
       <div>
         <h1>Grow your business, not your payroll.</h1>
-        <p class="lede">Topsail sets up the system that handles scheduling, patient reminders, daily routes and lab tracking for mobile phlebotomy and IV businesses, so your team can take on more visits without adding office staff.</p>
+        <p class="lede">Topsail Solutions sets up the systems behind a busy service business: scheduling and routes, fast replies to new leads, review requests, a website that brings in calls, and SEO that gets you found on Google.</p>
         <div class="ctas">
           <a class="btn btn-solid" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Book a call</a>
           <a class="btn btn-line" href="#services">See our services</a>
@@ -455,11 +479,11 @@
     <div class="wrap">
       <h2 id="for-h">Built for</h2>
       <ul>
-        <li>Mobile phlebotomy</li>
-        <li>Mobile IV and wellness</li>
-        <li>Specimen courier</li>
-        <li>Drug and DNA testing</li>
-        <li>In&#8209;home diagnostics</li>
+        <li>Mobile health &amp; IV</li>
+        <li>Testing &amp; couriers</li>
+        <li>Wellness studios</li>
+        <li>Salons &amp; spas</li>
+        <li>Home services</li>
       </ul>
     </div>
   </section>
@@ -468,7 +492,7 @@
     <div class="wrap">
       <header>
         <h2 id="svc-h">What we do</h2>
-        <p class="lede">Four ways to take work off your plate. Use one, or put them together.</p>
+        <p class="lede">Five ways to take work off your plate. Use one, or put them together.</p>
       </header>
       <div class="svc-grid">
         <article class="svc-card" style="--c:var(--cap-royal)">
@@ -497,6 +521,19 @@
           <p class="fit"><b>Built for</b> any small business that runs on Google.</p>
           <p class="links2"><a class="more" href="/automation/">Learn more &rarr;</a><a class="more" href="#ex-auto">See an example</a></p>
         </article>
+        <article class="svc-card" style="--c:var(--cap-lav)">
+          <div class="tube" style="--c:var(--cap-lav)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
+          <h3>Lead replies</h3>
+          <p class="what">Every new lead gets a reply drafted in your voice within minutes, ready for you to approve.</p>
+          <ul>
+            <li>Form and email leads on one list</li>
+            <li>Replies drafted in your voice</li>
+            <li>Nothing sends without your OK</li>
+            <li>Urgent leads flagged right away</li>
+          </ul>
+          <p class="fit"><b>Built for</b> service businesses that get leads by form or email.</p>
+          <p class="links2"><a class="more" href="/lead-replies/">Learn more &rarr;</a><a class="more" href="#ex-leads">See an example</a></p>
+        </article>
         <article class="svc-card" style="--c:var(--cap-gold)">
           <div class="tube" style="--c:var(--cap-gold)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
           <h3>Web design</h3>
@@ -522,6 +559,11 @@
           </ul>
           <p class="fit"><b>Built for</b> any small business that wants more customers from Google.</p>
           <p class="links2"><a class="more" href="/seo-marketing/">Learn more &rarr;</a></p>
+        </article>
+        <article class="svc-card start-here">
+          <h3>Not sure where to start?</h3>
+          <p class="what">Most owners start with one piece and add more later. On a free 20-minute call, we'll look at your week and point out the biggest time savers.</p>
+          <a class="btn btn-solid" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Book a free call</a>
         </article>
       </div>
     </div>
@@ -594,6 +636,38 @@
         </div>
       </div>
 
+      <div class="ex-row" id="ex-leads">
+        <div class="txt">
+          <div class="tag" style="--c:var(--cap-lav)"><i></i>Lead replies</div>
+          <h3>A reply ready before you're off the job</h3>
+          <p>A new lead comes in from your website while you're busy. A few minutes later, a reply in your voice is waiting. Read it, tap approve, and it goes out from your own email.</p>
+          <ul>
+            <li><b>Every lead</b> from forms and email on one sheet</li>
+            <li><b>Urgent requests</b> flagged with an instant alert</li>
+            <li><b>Google reviews</b> get a drafted reply too</li>
+          </ul>
+        </div>
+        <div>
+          <div class="leadmock" aria-hidden="true">
+            <div class="bubble-card">
+              <div class="who"><span>New lead &middot; website form</span><span>2:14 PM</span></div>
+              <dl>
+                <dt>Name</dt><dd>Tanya Brooks</dd>
+                <dt>Service</dt><dd>Deep clean, 3-bed house</dd>
+                <dt>Area</dt><dd>Eastside</dd>
+                <dt>When</dt><dd>This Saturday <span class="urg">Soon</span></dd>
+              </dl>
+            </div>
+            <div class="bubble-card">
+              <div class="who"><span>Reply drafted</span><span>2:17 PM</span></div>
+              <div class="draft">Hi Tanya, thanks for reaching out! We have openings this Saturday morning for a deep clean. Would 9 AM work? I can send a quote today.</div>
+              <span class="approve">Approve &amp; Send</span><span class="edit">Edit first</span>
+            </div>
+          </div>
+          <p class="demo-tag">Made-up names</p>
+        </div>
+      </div>
+
       <div class="ex-row" id="ex-web">
         <div class="txt">
           <div class="tag" style="--c:var(--cap-gold)"><i></i>Web design</div>
@@ -623,6 +697,7 @@
 
   <section class="pain" aria-labelledby="pain-h">
     <div class="wrap">
+      <p class="eyebrow">Operations systems, up close</p>
       <h2 id="pain-h">Your schedule, orders and team, all in one place.</h2>
       <p class="pain-intro">Even with a booking tool, the work around each visit usually still lands on you. Topsail brings it together and handles the follow-up.</p>
       <ul>
@@ -671,7 +746,7 @@
     <div class="wrap">
       <h2 id="yours-h">Built on tools you already have</h2>
       <ul>
-        <li><h3>Your Google account</h3><p>The system runs in a Google Sheet that you own. Your schedule and patient details stay in your account, not ours.</p></li>
+        <li><h3>Your Google account</h3><p>The system runs in a Google Sheet that you own. Your schedule and customer details stay in your account, not ours.</p></li>
         <li><h3>Nothing new to learn</h3><p>The office works in a spreadsheet and a simple dashboard. Your team uses a link on their phone, with no app to install.</p></li>
         <li><h3>Private links for staff</h3><p>Each staff member gets their own secure link. If a phone is lost, you shut that link off in seconds.</p></li>
         <li><h3>Shaped around how you work</h3><p>Your services, prices, labs and facilities, set up for you. Changes as you grow are part of the deal.</p></li>
@@ -696,20 +771,20 @@
         <h2 id="about-h">Meet Ben Michaels</h2>
         <p class="role">Founder, Topsail Solutions &middot; Operations &amp; Automation Specialist</p>
         <p>Ben has built and managed operations systems behind mobile healthcare companies, covering appointments, lab orders, staff schedules and daily routes. That work showed him firsthand where time is lost in a mobile health business, and which tasks can run on their own.</p>
-        <p>He founded Topsail to bring those systems to mobile phlebotomy and IV therapy businesses, helping owners cut administrative work and grow without adding office staff. In addition to operations systems, Topsail builds custom Google automations and websites for small businesses of all kinds.</p>
+        <p>He founded Topsail to bring those systems to mobile health businesses, helping owners cut administrative work and grow without adding office staff. Today Topsail also sets up lead replies, Google automations, websites and SEO for small businesses of all kinds, from wellness studios to home services.</p>
       </div>
       <div class="sailnote">
         <img src="assets/topsail-mark-white.svg" alt="" class="markbox">
         <p>A topsail is the upper sail that catches extra wind, so a ship can go farther without adding crew.</p>
-        <p class="why">That's the idea behind the name, and behind everything we set up: more visits, same team.</p>
+        <p class="why">That's the idea behind the name, and behind everything we set up: more customers, same team.</p>
       </div>
     </div>
   </section>
 
   <section class="call" id="call" aria-labelledby="call-h">
     <div class="wrap">
-      <h2 id="call-h">See your business running on it</h2>
-      <p>Pick a time for a 20-minute video call. We'll look at how you schedule today and show you what it would look like with Topsail.</p>
+      <h2 id="call-h">See what Topsail can take off your plate</h2>
+      <p>Pick a time for a 20-minute video call. We'll look at how you work today and show you where Topsail fits.</p>
       <a class="btn btn-solid" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Book a call</a>
       <p class="small">Or email <a href="mailto:bmichaels@topsailsolutions.com">bmichaels@topsailsolutions.com</a></p>
     </div>
@@ -724,7 +799,7 @@
       <a href="privacy.html">Privacy</a>
       <span>© 2026 Topsail Solutions</span>
     </div>
-    <nav class="svcs" aria-label="Services"><a href="/operations-systems/">Operations systems</a><a href="/automation/">Automation</a><a href="/websites/">Websites</a><a href="/seo-marketing/">SEO &amp; marketing</a></nav>
+    <nav class="svcs" aria-label="Services"><a href="/operations-systems/">Operations systems</a><a href="/automation/">Automation</a><a href="/lead-replies/">Lead replies</a><a href="/websites/">Websites</a><a href="/seo-marketing/">SEO &amp; marketing</a></nav>
   </div>
 </footer>
 

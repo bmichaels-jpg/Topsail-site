@@ -236,6 +236,24 @@
   .svc-card .fit b { color: var(--ink); font-weight: 600; }
   .svc-card .more { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 15px; text-decoration: none; }
   .svc-card .more:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .svc-grid { grid-template-columns: repeat(3, 1fr); }
+  .svc-card.start-here { background: var(--mist); border-color: var(--mist); justify-content: center; }
+  .svc-card.start-here .what { margin-bottom: 24px; }
+  .svc-card.start-here .btn { align-self: flex-start; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  /* lead replies mock */
+  .leadmock { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+  .leadmock dl { margin: 0; display: grid; grid-template-columns: 74px 1fr; gap: 6px 10px; font-size: 14.5px; }
+  .leadmock dt { color: var(--muted); }
+  .leadmock dd { margin: 0; font-weight: 500; }
+  .leadmock .urg { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 6px; background: #FCF1D9; color: #8A5A07; }
+  .leadmock .draft { font-size: 14.5px; line-height: 1.5; background: #F4F1FA; border-left: 3px solid var(--cap-lav); border-radius: 0 8px 8px 0; padding: 10px 12px; }
+  .leadmock .approve { display: inline-block; margin-top: 12px; background: var(--navy); color: #fff; font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: 999px; }
+  .leadmock .edit { display: inline-block; margin: 12px 0 0 10px; font-size: 14px; color: var(--muted); }
+  @media (max-width: 720px) { .leadmock { grid-template-columns: 1fr; } }
+  .svc-card .links2 { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 12px; }
+  .svc-card .links2 .more { margin-top: 0; }
+  footer .svcs { display: flex; gap: 20px; flex-wrap: wrap; width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.18); }
   .svc-cta { margin-top: 40px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
   .svc-cta p { color: var(--muted); }
   @media (max-width: 960px) { .svc-grid { grid-template-columns: 1fr; max-width: 560px; } }
@@ -413,6 +431,7 @@
   .flows li { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; font-size: 16px; }
   .flows b { display: block; color: var(--navy); font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 4px; }
   .fitlist { list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .yours ul.fitlist { display: flex; grid-template-columns: none; gap: 10px; max-width: none; }
   .fitlist li { border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 8px 16px; color: #fff; font-size: 15px; }
   .faq { padding: 96px 0; border-top: 1px solid var(--line); }
   .faq .wrap { display: grid; grid-template-columns: .75fr 1.25fr; gap: 64px; }
@@ -426,13 +445,13 @@
   .others { padding: 0 0 96px; }
   .others .wrap { border-top: 1px solid var(--line); padding-top: 72px; }
   .others h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 28px; }
-  .others ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .others ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .others a { display: block; height: 100%; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-radius: 18px; padding: 22px 24px; }
   .others a:hover { border-color: var(--navy); }
   .others b { display: block; font-family: var(--serif); font-size: 22px; color: var(--navy); font-weight: 600; margin-bottom: 6px; }
   .others span { font-size: 15px; color: var(--muted); }
   footer .svcs { display: flex; gap: 20px; flex-wrap: wrap; width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.18); order: 3; }
-  @media (max-width: 1040px) { .top .right nav { display: none; } .menu-btn { display: inline-flex; } }
+  @media (max-width: 1120px) { .top .right nav { display: none; } .menu-btn { display: inline-flex; } }
   @media (max-width: 960px) {
     .feat.svcfeat .wrap, .faq .wrap { grid-template-columns: 1fr; gap: 32px; }
     .groups .svc-grid, .others ul { grid-template-columns: 1fr; max-width: 560px; }
@@ -455,8 +474,9 @@
         <a href="/#services">Services</a>
         <a href="/operations-systems/">Operations</a>
         <a href="/automation/">Automation</a>
+        <a href="/lead-replies/">Lead replies</a>
         <a href="/websites/" aria-current="page">Websites</a>
-        <a href="/seo-marketing/">SEO & marketing</a>
+        <a href="/seo-marketing/">SEO &amp; marketing</a>
         <a class="btn btn-solid" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Book a call</a>
       </nav>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="lbl">Menu</span></button>
@@ -467,8 +487,9 @@
     <a href="/#services">Services</a>
     <a href="/operations-systems/">Operations</a>
     <a href="/automation/">Automation</a>
+    <a href="/lead-replies/">Lead replies</a>
     <a href="/websites/" aria-current="page">Websites</a>
-    <a href="/seo-marketing/">SEO & marketing</a>
+    <a href="/seo-marketing/">SEO &amp; marketing</a>
     <a href="/#about">About</a>
     <a class="btn btn-solid" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Book a call</a>
   </nav>
@@ -524,7 +545,7 @@
   <section class="others" aria-labelledby="oth-h">
     <div class="wrap">
       <h2 id="oth-h">Other ways we help</h2>
-      <ul><li><a href="/operations-systems/"><b>Operations systems</b><span>Scheduling, dispatch, routes and tracking in one system.</span></a></li><li><a href="/automation/"><b>Automation</b><span>Follow-ups, reviews and reports that run on their own.</span></a></li><li><a href="/seo-marketing/"><b>SEO &amp; marketing</b><span>Get found on Google and keep customers coming back.</span></a></li></ul>
+      <ul><li><a href="/operations-systems/"><b>Operations systems</b><span>Scheduling, dispatch, routes and tracking in one system.</span></a></li><li><a href="/automation/"><b>Automation</b><span>Follow-ups, reviews and reports that run on their own.</span></a></li><li><a href="/lead-replies/"><b>Lead replies</b><span>Every new lead answered in minutes, with your OK.</span></a></li><li><a href="/seo-marketing/"><b>SEO &amp; marketing</b><span>Get found on Google and keep customers coming back.</span></a></li></ul>
     </div>
   </section>
 </main>
@@ -537,7 +558,7 @@
       <a href="/privacy.html">Privacy</a>
       <span>© 2026 Topsail Solutions</span>
     </div>
-    <nav class="svcs" aria-label="Services"><a href="/operations-systems/">Operations systems</a><a href="/automation/">Automation</a><a href="/websites/">Websites</a><a href="/seo-marketing/">SEO &amp; marketing</a></nav>
+    <nav class="svcs" aria-label="Services"><a href="/operations-systems/">Operations systems</a><a href="/automation/">Automation</a><a href="/lead-replies/">Lead replies</a><a href="/websites/">Websites</a><a href="/seo-marketing/">SEO &amp; marketing</a></nav>
   </div>
 </footer>
 
@@ -551,7 +572,7 @@
     btn.addEventListener('click', function () { set(panel.hidden); });
     panel.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { set(false); btn.focus(); } });
-    window.addEventListener('resize', function () { if (window.innerWidth > 720 && !panel.hidden) set(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1120 && !panel.hidden) set(false); });
   })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "82b3b5c2e4914b73a1ba591c2423306c"}'></script><!-- End Cloudflare Web Analytics -->
