@@ -231,12 +231,12 @@
   .svc header p { margin-top: 16px; }
   .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .svc-card { border: 1px solid var(--line); border-radius: 22px; padding: 30px 28px 28px; display: flex; flex-direction: column; background: #fff; }
-  .svc-card .tube { margin-bottom: 20px; }
+  .svc-card .tube { display: none; }
   .svc-card h3 { font-size: 27px; font-weight: 600; margin-bottom: 10px; }
   .svc-card .what { color: var(--muted); margin-bottom: 18px; }
   .svc-card ul { list-style: none; margin: 0 0 22px; padding: 0; }
   .svc-card li { position: relative; padding-left: 22px; margin-top: 8px; font-size: 16px; line-height: 1.45; }
-  .svc-card li::before { content: ""; position: absolute; left: 0; top: .55em; width: 9px; height: 9px; border-radius: 50%; background: var(--c); }
+  .svc-card li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--navy); }
   .svc-card .fit { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); font-size: 15px; color: var(--muted); }
   .svc-card .fit b { color: var(--ink); font-weight: 600; }
   .svc-card .more { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 15px; text-decoration: none; }
@@ -252,7 +252,7 @@
   .leadmock dt { color: var(--muted); }
   .leadmock dd { margin: 0; font-weight: 500; }
   .leadmock .urg { display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 6px; background: #FCF1D9; color: #8A5A07; }
-  .leadmock .draft { font-size: 14.5px; line-height: 1.5; background: #F4F1FA; border-left: 3px solid var(--cap-lav); border-radius: 0 8px 8px 0; padding: 10px 12px; }
+  .leadmock .draft { font-size: 14.5px; line-height: 1.5; background: var(--mist); border-left: 3px solid var(--navy); border-radius: 0 8px 8px 0; padding: 10px 12px; }
   .leadmock .approve { display: inline-block; margin-top: 12px; background: var(--navy); color: #fff; font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: 999px; }
   .leadmock .edit { display: inline-block; margin: 12px 0 0 10px; font-size: 14px; color: var(--muted); }
   @media (max-width: 720px) { .leadmock { grid-template-columns: 1fr; } }
@@ -271,7 +271,7 @@
   .ex-row { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: center; padding: 48px 0; border-top: 1px solid var(--line); }
   .ex-row:first-of-type { border-top: none; padding-top: 0; }
   .ex-row .tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-  .ex-row .tag i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+  .ex-row .tag i { width: 10px; height: 10px; border-radius: 50%; background: var(--navy); }
   .ex-row h3 { font-size: 30px; font-weight: 600; margin-bottom: 12px; }
   .ex-row .txt p { color: var(--muted); }
   .ex-row .txt ul { margin: 18px 0 0; padding: 0; list-style: none; }
@@ -303,7 +303,7 @@
   .bubble a { color: inherit; font-weight: 600; }
   .mail .subj { font-weight: 600; font-size: 15px; margin-bottom: 6px; }
   .mail p { font-size: 14.5px; color: var(--muted); line-height: 1.5; }
-  .mail .quote { border-left: 3px solid var(--cap-gold); padding: 6px 12px; margin: 10px 0; background: #FBF7EC; color: var(--ink); font-size: 14.5px; border-radius: 0 8px 8px 0; }
+  .mail .quote { border-left: 3px solid var(--navy); padding: 6px 12px; margin: 10px 0; background: var(--mist); color: var(--ink); font-size: 14.5px; border-radius: 0 8px 8px 0; }
   /* web samples */
   .sites { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .site { display: block; text-decoration: none; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 24px 50px -30px rgba(5,32,75,.45); transition: transform .15s ease; }
@@ -313,6 +313,12 @@
   .site img { width: 100%; height: auto; aspect-ratio: 8/5; object-fit: cover; }
   .site .cap2 { padding: 12px 16px 14px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
   .site .cap2 b { font-size: 15.5px; } .site .cap2 span { font-size: 14px; color: var(--navy); font-weight: 600; white-space: nowrap; }
+  .site .cap2 small { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+  .ex-row.ex-wide { grid-template-columns: 1fr; gap: 36px; }
+  .ex-row.ex-wide .txt { max-width: 46em; }
+  .sites.three, .ex-wide .sites { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 960px) { .sites.three, .ex-wide .sites { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 720px) { .sites.three, .ex-wide .sites { grid-template-columns: 1fr; } }
   @media (prefers-reduced-motion: reduce) { .site { transition: none; } }
   @media (max-width: 960px) { .ex-row { grid-template-columns: 1fr; gap: 32px; } }
   @media (max-width: 720px) { .ex { padding: 64px 0; } .msgs, .sites { grid-template-columns: 1fr; } .mock .kpis b { font-size: 22px; } }
@@ -329,12 +335,12 @@
   .life { padding: 104px 0 96px; }
   .life header { max-width: 40em; margin-bottom: 56px; }
   .life header p { margin-top: 16px; }
-  .rack { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; }
+  .rack { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; counter-reset: step; }
   .rack::before { content: ""; position: absolute; left: 4%; right: 4%; top: 20px; height: 2px; background: var(--line); }
-  .rack li { position: relative; padding: 0 12px; }
-  .tube { width: 40px; height: 40px; margin: 0 0 22px; position: relative; border-radius: 12px; background: #EEF3F8; background: color-mix(in srgb, var(--c) 16%, #fff); }
-  .tube .top-c { position: absolute; inset: 12px; border-radius: 50%; background: var(--c); }
-  .tube .glass { display: none; }
+  .rack li { position: relative; padding: 0 12px; counter-increment: step; }
+  .tube { width: 40px; height: 40px; margin: 0 0 22px; position: relative; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; font: 600 17px/1 var(--sans); }
+  .rack .tube::before { content: counter(step); }
+  .tube .top-c, .tube .glass { display: none; }
   .rack h3 { font-size: 21px; margin-bottom: 6px; }
   .rack p { font-size: 15px; color: var(--muted); line-height: 1.5; }
 

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fern Hollow Yoga | Website preview by Topsail Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F7F2EA;
+    --sand: #EDE4D6;
+    --sage: #6B7F5E;
+    --sage-dark: #46553D;
+    --clay: #C0714F;
+    --ink: #2E2A25;
+    --muted: #6F675D;
+    --line: #DED3C2;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "DM Sans", system-ui, sans-serif;
+    --wrap: 1140px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: var(--sage-dark); }
+  :focus-visible { outline: 3px solid var(--clay); outline-offset: 3px; border-radius: 6px; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 28px; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.05; color: var(--ink); }
+  h1 { font-size: clamp(54px, 7.4vw, 96px); letter-spacing: -0.01em; }
+  h2 { font-size: clamp(40px, 5vw, 62px); }
+  h3 { font-size: 30px; }
+  em { font-style: italic; color: var(--sage); }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--clay); }
+  .btn { display: inline-block; font: 600 15px var(--sans); text-decoration: none; padding: 15px 28px; border-radius: 999px; border: 1.5px solid var(--sage-dark); cursor: pointer; }
+  .btn-solid { background: var(--sage-dark); color: #fff; }
+  .btn-solid:hover { background: var(--sage); border-color: var(--sage); }
+  .btn-line { background: transparent; color: var(--sage-dark); }
+  .btn-line:hover { background: var(--sand); }
+
+  .preview { background: #05204B; color: #E6ECF5; font-size: 13.5px; text-align: center; padding: 9px 16px; }
+  .preview a { color: #fff; }
+
+  header { position: sticky; top: 0; z-index: 20; background: rgba(247,242,234,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 78px; gap: 20px; }
+  .logo { text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+  .logo svg { width: 30px; height: 30px; }
+  .logo b { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 30px; line-height: 1; display: block; }
+  .logo span { font-size: 10.5px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+  nav { display: flex; align-items: center; gap: 30px; }
+  nav a { text-decoration: none; color: var(--ink); font-size: 15px; }
+  nav a:hover { color: var(--sage); }
+  nav .btn { padding: 11px 20px; font-size: 14px; color: #fff; }
+
+  /* hero */
+  .hero { padding: 64px 0 88px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center; }
+  .hero h1 { margin: 16px 0 24px; }
+  .hero .lede { font-size: 19px; color: var(--muted); max-width: 28em; margin-bottom: 34px; }
+  .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero .rating { margin-top: 28px; font-size: 15px; color: var(--muted); }
+  .hero .rating b { color: var(--clay); letter-spacing: .1em; }
+  .arch-wrap { position: relative; justify-self: center; width: min(100%, 440px); }
+  .arch { aspect-ratio: 4 / 5; border-radius: 220px 220px 24px 24px; background: linear-gradient(170deg, #D9CDB8 0%, #C9B79C 55%, #B49C7C 100%); position: relative; overflow: hidden; display: grid; place-items: end center; }
+  .arch svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .arch .ph { position: relative; margin-bottom: 22px; background: rgba(247,242,234,.85); border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--muted); }
+  .next { position: absolute; left: -36px; bottom: 54px; background: #fff; border-radius: 18px; padding: 16px 18px; box-shadow: 0 24px 40px -24px rgba(46,42,37,.45); min-width: 230px; }
+  .next small { display: block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--clay); font-weight: 600; }
+  .next b { display: block; font-family: var(--serif); font-size: 26px; font-weight: 600; line-height: 1.1; margin: 4px 0 2px; }
+  .next span { font-size: 14px; color: var(--muted); }
+
+  /* offer band */
+  .offer { background: var(--clay); color: #fff; }
+  .offer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 30px; padding-bottom: 30px; flex-wrap: wrap; }
+  .offer p { font-family: var(--serif); font-size: clamp(26px, 3vw, 36px); line-height: 1.15; }
+  .offer p i { opacity: .9; }
+  .offer .btn { background: #fff; color: var(--clay); border-color: #fff; }
+
+  section.block { padding: 100px 0; }
+  .center { text-align: center; max-width: 36em; margin: 0 auto 48px; }
+  .center p { color: var(--muted); margin-top: 14px; }
+
+  /* schedule */
+  .days { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+  .days button { font: 500 15px var(--sans); color: var(--ink); background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: 9px 18px; cursor: pointer; }
+  .days button[aria-selected="true"] { background: var(--sage-dark); border-color: var(--sage-dark); color: #fff; }
+  .sched { max-width: 820px; margin: 0 auto; background: #fff; border-radius: 22px; padding: 8px 28px; box-shadow: 0 30px 50px -40px rgba(46,42,37,.5); }
+  .sched li { list-style: none; display: grid; grid-template-columns: 96px 1fr auto; gap: 18px; align-items: center; padding: 20px 0; border-top: 1px solid #EFE7DA; }
+  .sched li:first-child { border-top: none; }
+  .sched .t { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .sched .t small { display: block; font-weight: 400; color: var(--muted); font-size: 13px; }
+  .sched .c b { font-family: var(--serif); font-size: 25px; font-weight: 600; display: block; line-height: 1.15; }
+  .sched .c span { font-size: 14px; color: var(--muted); }
+  .sched .lvl { display: inline-block; margin-left: 8px; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--sage-dark); background: #E7ECE1; border-radius: 999px; padding: 2px 9px; vertical-align: 2px; font-family: var(--sans); font-weight: 600; }
+  .sched button { font: 600 14px var(--sans); color: var(--sage-dark); background: transparent; border: 1.5px solid var(--sage-dark); border-radius: 999px; padding: 9px 18px; cursor: pointer; }
+  .sched button:hover { background: var(--sage-dark); color: #fff; }
+  .note { display: none; max-width: 820px; margin: 18px auto 0; text-align: center; background: #E7ECE1; color: var(--sage-dark); border-radius: 14px; padding: 12px 16px; font-size: 15px; }
+  .note.show { display: block; }
+
+  /* classes */
+  .classes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .classes article { background: var(--sand); border-radius: 24px; padding: 30px 24px; }
+  .classes .ic { width: 46px; height: 46px; border-radius: 50%; background: var(--cream); display: grid; place-items: center; margin-bottom: 20px; }
+  .classes .ic svg { width: 24px; height: 24px; }
+  .classes h3 { font-size: 28px; margin-bottom: 8px; }
+  .classes p { font-size: 15.5px; color: var(--muted); }
+  .classes .tag { display: inline-block; margin-top: 16px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--clay); font-weight: 600; }
+
+  /* memberships */
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+  .plans article { border: 1.5px solid var(--line); border-radius: 26px; padding: 34px 30px; display: flex; flex-direction: column; background: var(--cream); }
+  .plans article.fav { background: var(--sage-dark); border-color: var(--sage-dark); color: #F1EEE6; }
+  .plans article.fav h3, .plans article.fav .price { color: #fff; }
+  .plans .pill { align-self: flex-start; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; background: var(--clay); color: #fff; border-radius: 999px; padding: 4px 11px; margin-bottom: 14px; }
+  .plans h3 { font-size: 30px; }
+  .plans .price { font-family: var(--serif); font-size: 58px; font-weight: 600; line-height: 1; margin: 14px 0 6px; }
+  .plans .price small { font-family: var(--sans); font-size: 15px; font-weight: 400; opacity: .75; margin-left: 4px; }
+  .plans p.d { opacity: .8; font-size: 15.5px; margin-bottom: 22px; }
+  .plans ul { list-style: none; margin-bottom: 28px; }
+  .plans li { padding: 7px 0 7px 26px; position: relative; font-size: 15.5px; }
+  .plans li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 10px; height: 6px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); opacity: .7; }
+  .plans .btn { margin-top: auto; text-align: center; }
+  .plans article.fav .btn { background: #fff; color: var(--sage-dark); border-color: #fff; }
+
+  /* teachers */
+  .teachers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .teachers div { text-align: center; }
+  .teachers .ph { aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 50% 38%, #E5DACB 0 22%, transparent 23%), radial-gradient(ellipse at 50% 100%, #E5DACB 0 46%, transparent 47%), var(--sand); margin: 0 auto 18px; max-width: 220px; }
+  .teachers b { font-family: var(--serif); font-size: 26px; font-weight: 600; display: block; }
+  .teachers span { font-size: 15px; color: var(--muted); }
+  .teachers-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 26px; }
+
+  /* visit + faq */
+  .visit { background: var(--sand); }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+  .visit h2 { margin: 12px 0 20px; }
+  .visit p { color: var(--muted); }
+  .hours { margin-top: 26px; border-top: 1px solid var(--line); }
+  .hours div { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .hours span { color: var(--muted); }
+  .faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+  .faq details:first-of-type { border-top: 1px solid var(--line); }
+  .faq summary { cursor: pointer; list-style: none; font-family: var(--serif); font-size: 25px; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: var(--sans); font-weight: 400; color: var(--clay); }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { margin-top: 8px; color: var(--muted); }
+
+  footer { padding: 40px 0 110px; font-size: 14px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .bar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(247,242,234,.97); border-top: 1px solid var(--line); }
+  .bar .btn { text-align: center; padding: 13px; }
+
+  @media (max-width: 1000px) {
+    nav a:not(.btn) { display: none; }
+    .hero .wrap, .visit .wrap { grid-template-columns: 1fr; gap: 48px; }
+    .classes { grid-template-columns: 1fr 1fr; }
+    .plans { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    .next { left: 12px; }
+  }
+  @media (max-width: 720px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 20px; }
+    .hero { padding: 40px 0 64px; }
+    section.block { padding: 68px 0; }
+    .classes, .teachers { grid-template-columns: 1fr; }
+    .sched { padding: 4px 18px; }
+    .sched li { grid-template-columns: 1fr auto; gap: 6px 14px; }
+    .sched .t { grid-column: 1 / -1; }
+    .bar { display: grid; }
+    .logo span { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="preview"><strong>Sample website</strong> by Topsail Solutions. Fern Hollow Yoga is a made-up business. <a href="https://topsailsolutions.com/#examples">Back to Topsail</a></div>
+
+<header id="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Fern Hollow Yoga home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29V9" stroke="#46553D" stroke-width="1.6" fill="none" stroke-linecap="round"/><g fill="#6B7F5E"><path d="M16 12c-4-1-7-4-8-8 4 0 7 3 8 8z"/><path d="M16 12c4-1 7-4 8-8-4 0-7 3-8 8z"/><path d="M16 19c-4-1-7-4-8-8 4 0 7 3 8 8z"/><path d="M16 19c4-1 7-4 8-8-4 0-7 3-8 8z"/><path d="M16 26c-4-1-7-4-8-8 4 0 7 3 8 8z"/><path d="M16 26c4-1 7-4 8-8-4 0-7 3-8 8z"/></g></svg>
+      <div><b>Fern Hollow</b><span>Yoga studio</span></div>
+    </a>
+    <nav aria-label="Main">
+      <a href="#schedule">Schedule</a>
+      <a href="#classes">Classes</a>
+      <a href="#plans">Memberships</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-solid" href="#schedule">Book a class</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Yoga studio · Sample site</p>
+        <h1>Slow down. Breathe. <em>Come as you are.</em></h1>
+        <p class="lede">Small, welcoming classes for every body and every level. Book online in seconds, then just bring yourself. We have mats if you need one.</p>
+        <div class="ctas">
+          <a class="btn btn-solid" href="#schedule">See this week's classes</a>
+          <a class="btn btn-line" href="#new">New here?</a>
+        </div>
+        <p class="rating"><b>★★★★★</b>&nbsp; 5.0 on Google · 67 reviews</p>
+      </div>
+      <div class="arch-wrap">
+        <div class="arch">
+          <svg viewBox="0 0 400 500" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+            <circle cx="290" cy="150" r="58" fill="#F3E3C7" opacity=".7"/>
+            <path d="M0 380 C80 330 150 350 210 330 C280 306 340 320 400 300 L400 500 L0 500Z" fill="#A58C6B" opacity=".55"/>
+            <path d="M0 420 C90 390 170 410 240 392 C310 374 360 390 400 380 L400 500 L0 500Z" fill="#8E7658" opacity=".6"/>
+            <g stroke="#6B7F5E" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"><path d="M70 500 C80 420 70 360 40 300"/><path d="M110 500 C112 430 130 380 160 330"/></g>
+            <g fill="#6B7F5E" opacity=".85"><ellipse cx="46" cy="330" rx="7" ry="16" transform="rotate(-30 46 330)"/><ellipse cx="62" cy="372" rx="7" ry="16" transform="rotate(-20 62 372)"/><ellipse cx="150" cy="350" rx="7" ry="16" transform="rotate(30 150 350)"/><ellipse cx="132" cy="392" rx="7" ry="16" transform="rotate(20 132 392)"/></g>
+          </svg>
+          <span class="ph">Studio photo goes here</span>
+        </div>
+        <div class="next" aria-hidden="true">
+          <small>Next class</small>
+          <b>Slow Flow</b>
+          <span>Today 5:30 PM · 4 spots left</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer" id="new" aria-label="New student offer">
+    <div class="wrap">
+      <p>New here? <i>Two weeks of unlimited classes for $39.</i></p>
+      <a class="btn" href="#schedule">Start your two weeks</a>
+    </div>
+  </section>
+
+  <section class="block" id="schedule" aria-labelledby="sch-h">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow">Schedule</p>
+        <h2 id="sch-h">This week at the studio</h2>
+        <p>Pick a day and save your spot. Classes are capped at 14 so there's always room to breathe.</p>
+      </div>
+      <div class="days" role="tablist" aria-label="Day of the week">
+        <button role="tab" aria-selected="true" data-day="0">Mon</button>
+        <button role="tab" aria-selected="false" data-day="1">Tue</button>
+        <button role="tab" aria-selected="false" data-day="2">Wed</button>
+        <button role="tab" aria-selected="false" data-day="3">Thu</button>
+        <button role="tab" aria-selected="false" data-day="4">Fri</button>
+        <button role="tab" aria-selected="false" data-day="5">Sat</button>
+        <button role="tab" aria-selected="false" data-day="6">Sun</button>
+      </div>
+      <ul class="sched" id="sched" role="tabpanel" aria-live="polite"></ul>
+      <div class="note" id="note" role="status">Preview only: online booking turns on when the site goes live.</div>
+    </div>
+  </section>
+
+  <section class="block" id="classes" aria-labelledby="cl-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow">Classes</p>
+        <h2 id="cl-h">Find your practice</h2>
+      </div>
+      <div class="classes">
+        <article><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#6B7F5E" stroke-width="1.6" stroke-linecap="round"><path d="M3 15c3-4 6-4 9 0s6 4 9 0"/><path d="M3 10c3-4 6-4 9 0s6 4 9 0" opacity=".5"/></svg></div><h3>Slow Flow</h3><p>Gentle movement linked with the breath. A calm way to start or end the day.</p><span class="tag">All levels</span></article>
+        <article><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#6B7F5E" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg></div><h3>Vinyasa</h3><p>A steady, warming flow that builds strength and focus. Expect to sweat a little.</p><span class="tag">Some experience</span></article>
+        <article><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#6B7F5E" stroke-width="1.6" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg></div><h3>Yin &amp; Restore</h3><p>Long, supported holds with props. Deep rest for busy minds and tight hips.</p><span class="tag">All levels</span></article>
+        <article><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#6B7F5E" stroke-width="1.6" stroke-linecap="round"><path d="M12 21V11"/><path d="M12 11c-3 0-5-2-5-5 3 0 5 2 5 5zM12 11c3 0 5-2 5-5-3 0-5 2-5 5z"/></svg></div><h3>Beginners</h3><p>The basics, slowly and clearly: poses, breathing and how to use props.</p><span class="tag">New to yoga</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="plans" aria-labelledby="pl-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow">Memberships</p>
+        <h2 id="pl-h">Practice your way</h2>
+        <p>No sign-up fees. Pause or cancel your membership anytime.</p>
+      </div>
+      <div class="plans">
+        <article>
+          <h3>Drop-in</h3>
+          <p class="price">$22<small>/ class</small></p>
+          <p class="d">Come when it suits you.</p>
+          <ul><li>Any regular class</li><li>Mat rental included</li></ul>
+          <a class="btn btn-line" href="#schedule">Book a class</a>
+        </article>
+        <article class="fav">
+          <span class="pill">Best value</span>
+          <h3>Unlimited</h3>
+          <p class="price">$119<small>/ month</small></p>
+          <p class="d">For a steady weekly practice.</p>
+          <ul><li>Every class, every week</li><li>Book up to 14 days ahead</li><li>10% off workshops</li></ul>
+          <a class="btn" href="#schedule">Start unlimited</a>
+        </article>
+        <article>
+          <h3>10-class pack</h3>
+          <p class="price">$180</p>
+          <p class="d">Good for 6 months.</p>
+          <ul><li>$18 a class</li><li>Share with a friend</li></ul>
+          <a class="btn btn-line" href="#schedule">Buy a pack</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="te-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow">Teachers</p>
+        <h2 id="te-h">The people who'll guide you</h2>
+      </div>
+      <div class="teachers">
+        <div><div class="ph" aria-hidden="true"></div><b>Ana</b><span>Slow Flow · Yin</span></div>
+        <div><div class="ph" aria-hidden="true"></div><b>Marcus</b><span>Vinyasa</span></div>
+        <div><div class="ph" aria-hidden="true"></div><b>Lena</b><span>Beginners · Restore</span></div>
+      </div>
+      <p class="teachers-note">On a real site, this shows the studio's own teachers and photos.</p>
+    </div>
+  </section>
+
+  <section class="block visit" id="visit" aria-labelledby="vi-h">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Visit</p>
+        <h2 id="vi-h">Find the studio</h2>
+        <p>A quiet second-floor studio in the middle of town, with free parking out back. Arrive 10 minutes early for your first class.</p>
+        <div class="hours">
+          <div><b>Mon – Fri</b><span>6:00 AM – 8:00 PM</span></div>
+          <div><b>Sat – Sun</b><span>8:00 AM – 12:00 PM</span></div>
+          <div><b>Call or text</b><span><a href="tel:5550100163">(555) 010-0163</a></span></div>
+        </div>
+      </div>
+      <div class="faq">
+        <details open><summary>I've never done yoga. Is that okay?</summary><p>Absolutely. Start with Beginners or Slow Flow, and let your teacher know it's your first class.</p></details>
+        <details><summary>What should I bring?</summary><p>Comfortable clothes and water. Mats, blocks and blankets are here for you.</p></details>
+        <details><summary>Can I cancel a booking?</summary><p>Yes, up to 6 hours before class, right from your confirmation text.</p></details>
+        <details><summary>Do you offer private sessions?</summary><p>Yes. Ask at the front desk or send us a message to set one up.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Fern Hollow Yoga · Sample business</span>
+    <span>Sample website by Topsail Solutions · <a href="https://topsailsolutions.com/#examples">topsailsolutions.com</a></span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-line" href="tel:5550100163">Call</a>
+  <a class="btn btn-solid" href="#schedule">Book a class</a>
+</div>
+
+<script>
+  (function () {
+    var week = [
+      [['6:30 AM','60 min','Slow Flow','Ana','All levels'],['12:00 PM','45 min','Lunch Vinyasa','Marcus','Some experience'],['5:30 PM','60 min','Slow Flow','Ana','All levels'],['7:00 PM','75 min','Yin & Restore','Lena','All levels']],
+      [['7:00 AM','60 min','Vinyasa','Marcus','Some experience'],['9:30 AM','60 min','Beginners','Lena','New to yoga'],['6:00 PM','60 min','Vinyasa','Marcus','Some experience']],
+      [['6:30 AM','60 min','Slow Flow','Ana','All levels'],['12:00 PM','45 min','Lunch Vinyasa','Marcus','Some experience'],['5:30 PM','60 min','Beginners','Lena','New to yoga'],['7:00 PM','75 min','Yin & Restore','Ana','All levels']],
+      [['7:00 AM','60 min','Vinyasa','Marcus','Some experience'],['9:30 AM','60 min','Slow Flow','Ana','All levels'],['6:00 PM','75 min','Yin & Restore','Lena','All levels']],
+      [['6:30 AM','60 min','Slow Flow','Ana','All levels'],['12:00 PM','45 min','Lunch Vinyasa','Marcus','Some experience'],['5:30 PM','60 min','Candlelit Restore','Lena','All levels']],
+      [['8:00 AM','75 min','Weekend Flow','Marcus','Some experience'],['10:00 AM','60 min','Beginners','Lena','New to yoga']],
+      [['9:00 AM','60 min','Slow Flow','Ana','All levels'],['10:30 AM','75 min','Yin & Restore','Lena','All levels']]
+    ];
+    var list = document.getElementById('sched'), note = document.getElementById('note');
+    function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+    function show(d) {
+      list.innerHTML = week[d].map(function (c) {
+        return '<li><span class="t">' + c[0] + '<small>' + c[1] + '</small></span><span class="c"><b>' + esc(c[2]) + '<span class="lvl">' + c[4] + '</span></b><span>with ' + c[3] + '</span></span><button type="button">Book</button></li>';
+      }).join('');
+    }
+    document.querySelector('.days').addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      this.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+      show(Number(b.dataset.day));
+    });
+    list.addEventListener('click', function (e) { if (e.target.closest('button')) note.classList.add('show'); });
+    show(0);
+  })();
+</script>
+</body>
+</html>

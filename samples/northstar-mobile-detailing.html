@@ -7,352 +7,399 @@
 <title>Northstar Mobile Detailing | Website preview by Topsail Solutions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,800;62..125,900&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --brand: #1F4E79;
-    --brand-dark: #14324F;
-    --accent: #E58E2E;
-    --tint: #EAF1F7;
-    --ink: #1d2327;
-    --muted: #5b6670;
-    --line: #e4e0d8;
-    --paper: #fbf8f3;
-    --white: #ffffff;
+  :root {
+    --bg: #0D0F12;
+    --panel: #15181D;
+    --panel-2: #1C2027;
+    --line: #2A3039;
+    --text: #F2F4F7;
+    --muted: #9AA3AF;
+    --accent: #FFC531;
+    --accent-ink: #1A1400;
+    --wrap: 1180px;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
-  a{color:inherit}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-0.01em}
-  h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:14px}
-  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-  .lead{color:var(--muted);max-width:620px;font-size:18px}
-  section{padding:88px 0}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--bg); color: var(--text); font-family: "Archivo", system-ui, sans-serif; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  .display { font-weight: 900; font-stretch: 75%; text-transform: uppercase; letter-spacing: -0.01em; line-height: .92; }
+  .kicker { font-size: 13px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-stretch: 85%; text-transform: uppercase; letter-spacing: .06em; font-size: 15px; text-decoration: none; padding: 16px 26px; border-radius: 4px; border: 2px solid var(--accent); cursor: pointer; }
+  .btn-solid { background: var(--accent); color: var(--accent-ink); }
+  .btn-solid:hover { filter: brightness(1.08); }
+  .btn-line { color: var(--text); border-color: var(--line); background: transparent; }
+  .btn-line:hover { border-color: var(--text); }
 
-  /* preview banner */
-  .preview{background:#1b1f24;color:#e9edf1;font-size:13.5px;text-align:center;padding:9px 16px}
-  .preview strong{color:#fff;font-weight:600}
+  .preview { background: #05204B; color: #E6ECF5; font-size: 13.5px; text-align: center; padding: 9px 16px; }
+  .preview a { color: #fff; }
 
-  /* header */
-  header{position:sticky;top:0;z-index:20;background:rgba(251,248,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
-  .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .mark{width:40px;height:40px;border-radius:12px;background:var(--brand);display:grid;place-items:center;flex:none}
-  .logo-text{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:19px;line-height:1.1;color:var(--brand-dark)}
-  .logo-text small{display:block;font-family:Inter,sans-serif;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-  .links{display:flex;gap:28px;font-size:15px;font-weight:500}
-  .links a{text-decoration:none;color:var(--muted)}
-  .links a:hover{color:var(--brand-dark)}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;white-space:nowrap}
-  .btn-primary{background:var(--brand);color:#fff}
-  .btn-primary:hover{background:var(--brand-dark)}
-  .btn-ghost{border-color:var(--brand);color:var(--brand-dark);background:transparent}
-  .btn-ghost:hover{background:var(--tint)}
-  .btn-sm{padding:10px 18px;font-size:14.5px}
+  header { position: sticky; top: 0; z-index: 20; background: rgba(13,15,18,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo svg { width: 26px; height: 26px; }
+  .logo b { font-weight: 900; font-stretch: 75%; font-size: 26px; letter-spacing: .04em; text-transform: uppercase; }
+  .logo span { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); display: block; margin-top: -4px; }
+  nav { display: flex; align-items: center; gap: 28px; }
+  nav a { text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  nav a:hover { color: var(--text); }
+  nav .btn { padding: 11px 18px; font-size: 13px; color: var(--accent-ink); white-space: nowrap; }
 
   /* hero */
-  .hero{padding:72px 0 80px}
-  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(40px,5.6vw,64px);margin-bottom:20px;color:var(--brand-dark)}
-  .hero h1 em{font-style:italic;color:var(--accent)}
-  .hero .lead{margin-bottom:32px}
-  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
-  .proof{display:flex;flex-wrap:wrap;gap:12px 26px;font-size:14.5px;color:var(--muted)}
-  .proof span{display:flex;align-items:center;gap:8px}
-  .stars{color:#e8a33d;letter-spacing:1px}
-  .art{position:relative;aspect-ratio:1/1.02;border-radius:28px;background:var(--brand);overflow:hidden}
-  .art > svg{position:absolute;inset:0;width:100%;height:100%}
-  .art-card{position:absolute;left:22px;right:22px;bottom:22px;background:#fff;border-radius:18px;padding:18px 20px;display:flex;gap:14px;align-items:center;box-shadow:0 12px 30px rgba(0,0,0,.18)}
-  .art-card .dot{width:44px;height:44px;border-radius:50%;background:var(--tint);display:grid;place-items:center;flex:none}
-  .art-card b{display:block;font-size:15.5px}
-  .art-card span{font-size:13.5px;color:var(--muted)}
+  .hero { position: relative; overflow: hidden; padding: 72px 0 0; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 70% at 78% 40%, rgba(255,197,49,.10), transparent 70%); pointer-events: none; }
+  .hero > .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .hero h1 { font-size: clamp(56px, 8.4vw, 116px); margin: 18px 0 26px; }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.lede { color: var(--muted); font-size: 19px; max-width: 30em; margin-bottom: 34px; }
+  .hero .ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .car { width: 100%; height: auto; }
+  .streaks line { stroke: var(--accent); stroke-linecap: round; opacity: .55; }
+  .proof { position: relative; margin-top: 64px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--panel); }
+  .proof ul { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); }
+  .proof li { padding: 22px 24px; border-left: 1px solid var(--line); }
+  .proof li:first-child { border-left: none; }
+  .proof b { display: block; font-weight: 900; font-stretch: 75%; font-size: 30px; text-transform: uppercase; line-height: 1; }
+  .proof span { font-size: 14px; color: var(--muted); }
+  .proof .star { color: var(--accent); }
 
-  /* trust strip */
-  .strip{background:var(--brand-dark);color:#fff;padding:30px 0}
-  .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-  .strip b{font-family:Fraunces,Georgia,serif;font-size:28px;font-weight:600;display:block;line-height:1.1}
-  .strip span{font-size:14px;opacity:.82}
+  section.block { padding: 100px 0; }
+  .head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 44px; flex-wrap: wrap; }
+  .head h2 { font-size: clamp(42px, 5.6vw, 72px); margin-top: 10px; }
+  .head p { color: var(--muted); max-width: 26em; }
 
-  /* services */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
-  .card .ic{width:48px;height:48px;border-radius:14px;background:var(--tint);display:grid;place-items:center;margin-bottom:18px}
-  .card h3{font-size:21px;margin-bottom:8px}
-  .card p{color:var(--muted);font-size:15.5px}
+  /* packages */
+  .pk { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .pk article { background: var(--panel); padding: 30px 28px 32px; border-left: 1px solid var(--line); display: flex; flex-direction: column; position: relative; }
+  .pk article:first-child { border-left: none; }
+  .pk article.top { background: var(--panel-2); box-shadow: inset 0 3px 0 var(--accent); }
+  .pk .badge { position: absolute; top: 18px; right: 18px; background: var(--accent); color: var(--accent-ink); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 5px 9px; border-radius: 3px; }
+  .pk h3 { font-weight: 900; font-stretch: 75%; text-transform: uppercase; font-size: 30px; line-height: 1; }
+  .pk .price { margin: 14px 0 4px; font-weight: 900; font-stretch: 75%; font-size: 64px; line-height: 1; }
+  .pk .price small { font-size: 18px; font-weight: 600; font-stretch: 100%; color: var(--muted); margin-left: 4px; }
+  .pk .time { color: var(--muted); font-size: 14px; margin-bottom: 22px; }
+  .pk ul { list-style: none; margin-bottom: 28px; }
+  .pk li { display: flex; gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 15.5px; }
+  .pk li::before { content: "✓"; color: var(--accent); font-weight: 800; width: 14px; flex: none; }
+  .pk li.no { color: #5D6570; }
+  .pk li.no::before { content: "–"; color: #5D6570; }
+  .pk .btn { margin-top: auto; justify-content: center; }
+  .pk-note { margin-top: 16px; font-size: 14px; color: var(--muted); }
+
+  /* add-ons */
+  .addons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .addons div { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 22px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+  .addons b { font-weight: 600; }
+  .addons span { font-weight: 800; font-stretch: 85%; color: var(--accent); white-space: nowrap; }
 
   /* steps */
-  .steps-sec{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:44px;counter-reset:s}
-  .step{position:relative;padding-top:60px}
-  .step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-family:Fraunces,serif;font-weight:600;font-size:20px;display:grid;place-items:center}
-  .step h3{font-size:22px;margin-bottom:8px}
-  .step p{color:var(--muted)}
+  .steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; counter-reset: s; border-top: 1px solid var(--line); }
+  .steps li { counter-increment: s; padding: 30px 28px 0 0; }
+  .steps li::before { content: "0" counter(s); display: block; font-weight: 900; font-stretch: 75%; font-size: 84px; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px var(--accent); margin-bottom: 16px; }
+  .steps h3 { font-weight: 800; font-stretch: 85%; text-transform: uppercase; font-size: 22px; letter-spacing: .02em; margin-bottom: 6px; }
+  .steps p { color: var(--muted); }
 
-  /* who */
-  .who{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
-  .who div{background:var(--tint);border-radius:16px;padding:22px}
-  .who b{display:block;font-size:16.5px;margin-bottom:4px;color:var(--brand-dark)}
-  .who span{font-size:14.5px;color:var(--muted)}
+  /* before / after */
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .ba div { aspect-ratio: 4 / 3; border-radius: 8px; border: 1px dashed #3A414C; display: grid; place-items: center; color: var(--muted); font-size: 14px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600;
+    background: repeating-linear-gradient(135deg, #14171C 0 14px, #171B21 14px 28px); }
+  .ba div.after { border-color: rgba(255,197,49,.5); color: var(--accent); }
+  .ba-note { margin-top: 14px; font-size: 14px; color: var(--muted); }
 
-  /* about */
-  .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
-  .portrait{aspect-ratio:4/5;border-radius:24px;background:var(--tint);position:relative;overflow:hidden;display:grid;place-items:center}
-  .portrait .ph{font-size:13px;color:var(--muted);text-align:center;padding:20px;position:absolute;bottom:14px;left:0;right:0}
-  .about p{color:var(--muted);margin-bottom:16px;max-width:560px}
-  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-  .facts span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:500}
+  /* area + booking */
+  .area { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+  .area h2 { font-size: clamp(42px, 5.6vw, 72px); margin: 10px 0 20px; }
+  .area p { color: var(--muted); margin-bottom: 22px; }
+  .towns { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+  .towns li { border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; font-size: 14px; }
+  .hours { border-top: 1px solid var(--line); }
+  .hours div { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; }
+  .hours span { color: var(--muted); }
+  .book { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 30px; }
+  .book h3 { font-weight: 900; font-stretch: 75%; text-transform: uppercase; font-size: 34px; line-height: 1; margin-bottom: 6px; }
+  .book .sub { color: var(--muted); font-size: 15px; margin-bottom: 22px; }
+  .book label { display: block; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 18px 0 8px; }
+  .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .seg button, .slots button { font: 600 15px "Archivo", sans-serif; color: var(--text); background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 12px 8px; cursor: pointer; }
+  .seg button[aria-pressed="true"], .slots button[aria-pressed="true"] { border-color: var(--accent); background: rgba(255,197,49,.10); color: var(--accent); }
+  .slots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .total { display: flex; justify-content: space-between; align-items: baseline; margin: 24px 0 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .total b { font-weight: 900; font-stretch: 75%; font-size: 40px; line-height: 1; }
+  .total span { color: var(--muted); font-size: 14px; }
+  .book .btn { width: 100%; justify-content: center; }
+  .note { display: none; margin-top: 14px; padding: 12px 14px; border-radius: 6px; background: rgba(255,197,49,.10); color: var(--accent); font-size: 14.5px; }
+  .note.show { display: block; }
 
-  /* reviews */
-  .reviews{background:var(--brand);color:#fff;text-align:center}
-  .reviews h2{color:#fff}
-  .big-rating{font-family:Fraunces,serif;font-size:76px;font-weight:600;line-height:1}
-  .reviews .stars{font-size:28px;margin:8px 0 6px}
-  .reviews p{opacity:.88;margin-bottom:28px}
-  .btn-light{background:#fff;color:var(--brand-dark)}
+  footer { border-top: 1px solid var(--line); padding: 36px 0 110px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .bar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(13,15,18,.96); border-top: 1px solid var(--line); }
+  .bar .btn { justify-content: center; padding: 14px; }
 
-  /* hours + contact */
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
-  .panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px}
-  .panel h3{font-size:23px;margin-bottom:16px}
-  .hours{width:100%;border-collapse:collapse;font-size:15.5px}
-  .hours td{padding:9px 0;border-bottom:1px solid var(--line)}
-  .hours td:last-child{text-align:right;font-weight:500;white-space:nowrap;padding-left:12px}
-  .area{margin-top:18px;color:var(--muted);font-size:15px}
-  .contact-line{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:17px}
-  .contact-line a{text-decoration:none;font-weight:600;color:var(--brand-dark)}
-  .book-box{margin-top:22px;background:var(--tint);border-radius:16px;padding:20px}
-  .book-box b{display:block;margin-bottom:4px}
-  .book-box span{font-size:14.5px;color:var(--muted)}
-  .slots{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
-  .slots button{border:1.5px solid var(--brand);background:#fff;color:var(--brand-dark);border-radius:10px;padding:8px 12px;font:500 14px Inter,sans-serif;cursor:pointer}
-  .slots button.on{background:var(--brand);color:#fff}
-  .note{font-size:13px;color:var(--muted);margin-top:10px;display:none}
-  .note.show{display:block}
-
-  footer{padding:40px 0 50px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
-  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
-  .call-bar{display:none}
-
-  @media (max-width:900px){
-    .links{display:none}
-    .hero-grid,.about{grid-template-columns:1fr;gap:36px}
-    .art{max-width:460px;width:100%;margin:0 auto}
-    .strip-grid{grid-template-columns:repeat(2,1fr)}
-    .cards{grid-template-columns:1fr 1fr}
-    .steps{grid-template-columns:1fr;gap:28px}
-    .who{grid-template-columns:1fr 1fr}
-    .two{grid-template-columns:1fr}
-    .portrait{max-width:380px;aspect-ratio:16/11}
+  @media (max-width: 980px) {
+    nav a:not(.btn) { display: none; }
+    .hero > .wrap, .area { grid-template-columns: 1fr; }
+    .hero { padding-top: 48px; }
+    .pk, .addons { grid-template-columns: 1fr; }
+    .pk article { border-left: none; border-top: 1px solid var(--line); }
+    .pk article:first-child { border-top: none; }
+    .proof ul { grid-template-columns: 1fr 1fr; }
+    .proof li:nth-child(3) { border-left: none; }
+    .proof li:nth-child(n+3) { border-top: 1px solid var(--line); }
   }
-  @media (max-width:600px){
-    body{font-size:16px;padding-bottom:76px}
-    section{padding:64px 0}
-    .hero{padding:44px 0 56px}
-    .nav .btn{display:none}
-    .cards,.who{grid-template-columns:1fr}
-    .strip b{font-size:24px}
-    .cta-row .btn{flex:1;justify-content:center}
-    .call-bar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:12px 16px}
-    .call-bar .btn{flex:1;justify-content:center}
+  @media (max-width: 720px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 18px; }
+    section.block { padding: 68px 0; }
+    .steps { grid-template-columns: 1fr; }
+    .steps li { padding-right: 0; }
+    .ba { grid-template-columns: 1fr; }
+    .bar { display: grid; }
+    footer { padding-bottom: 120px; }
+    .logo span { display: none; }
   }
 </style>
 </head>
 <body>
 
-<div class="preview"><strong>Sample website</strong> by Topsail Solutions. Northstar Mobile Detailing is a made-up business. <a href="https://topsailsolutions.com/#examples" style="color:#fff">Back to Topsail</a></div>
+<div class="preview"><strong>Sample website</strong> by Topsail Solutions. Northstar Mobile Detailing is a made-up business. <a href="https://topsailsolutions.com/#examples">Back to Topsail</a></div>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#top">
-      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M3 17v-4l2-5a2 2 0 0 1 1.9-1.4h10.2A2 2 0 0 1 19 8l2 5v4"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M3 12h18"/></svg></span>
-      <span class="logo-text">Northstar<small>Mobile Detailing</small></span>
+<header id="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Northstar Mobile Detailing home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFC531" d="M12 1.5l2.6 7.9 7.9 2.6-7.9 2.6L12 22.5l-2.6-7.9L1.5 12l7.9-2.6z"/></svg>
+      <div><b>Northstar</b><span>Mobile Detailing</span></div>
     </a>
-    <nav class="links">
-      <a href="#services">Services</a>
+    <nav aria-label="Main">
+      <a href="#packages">Packages</a>
+      <a href="#addons">Add-ons</a>
       <a href="#how">How it works</a>
-      <a href="#about">About</a>
-      <a href="#contact">Hours &amp; contact</a>
+      <a href="#book">Area &amp; hours</a>
+      <a class="btn btn-solid" href="#book">Book a detail</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="tel:+15550100187"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> (555) 010-0187</a>
   </div>
 </header>
 
-<main id="top">
+<main>
   <section class="hero">
-    <div class="wrap hero-grid">
+    <div class="wrap">
       <div>
-        <div class="eyebrow">Mobile car detailing · Sample site</div>
-        <h1>A spotless car, <em>without leaving home.</em></h1>
-        <p class="lead">We bring the water, power and products to your driveway or office parking lot. You get your day back and a car that looks new.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#contact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></svg> Book a detail</a>
-          <a class="btn btn-ghost" href="tel:+15550100187"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Call (555) 010-0187</a>
-        </div>
-        <div class="proof">
-          <span><span class="stars">★★★★★</span> 4.9 on Google (112 reviews)</span>
-          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Fully mobile</span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Book online</span>
+        <p class="kicker">Fully mobile · Sample site</p>
+        <h1 class="display">Showroom shine. <em>In your driveway.</em></h1>
+        <p class="lede">We bring the water, power and pro-grade products to your home or office. You get your afternoon back and a car that looks new.</p>
+        <div class="ctas">
+          <a class="btn btn-solid" href="#book">Book a detail &rarr;</a>
+          <a class="btn btn-line" href="tel:5550100187">Call (555) 010-0187</a>
         </div>
       </div>
-      <div class="art" aria-hidden="true">
-        <svg viewBox="0 0 400 410" preserveAspectRatio="xMidYMid slice">
-          <circle cx="330" cy="70" r="120" fill="rgba(255,255,255,.07)"/>
-          <circle cx="60" cy="330" r="150" fill="rgba(255,255,255,.06)"/>
-
-          <g transform="translate(40 150)">
-            <path d="M40 120 L40 92 Q42 78 58 74 L96 66 L138 34 Q148 28 162 28 L230 28 Q246 28 258 38 L292 70 L318 76 Q334 80 336 96 L336 120 Z" fill="rgba(255,255,255,.95)"/>
-            <path d="M146 44 L180 44 L180 70 L112 70 Z" fill="#1F4E79" opacity=".35"/>
-            <path d="M192 44 L232 44 Q240 44 246 50 L268 70 L192 70 Z" fill="#1F4E79" opacity=".35"/>
-            <circle cx="104" cy="122" r="28" fill="#14324F"/><circle cx="104" cy="122" r="12" fill="#fff" opacity=".85"/>
-            <circle cx="276" cy="122" r="28" fill="#14324F"/><circle cx="276" cy="122" r="12" fill="#fff" opacity=".85"/>
-            <rect x="0" y="152" width="380" height="6" rx="3" fill="rgba(255,255,255,.25)"/>
-          </g>
-          <g fill="#E58E2E">
-            <path d="M300 70 l8 18 18 8 -18 8 -8 18 -8 -18 -18 -8 18 -8z"/>
-            <path d="M90 90 l5 11 11 5 -11 5 -5 11 -5 -11 -11 -5 11 -5z" opacity=".85"/>
-            <path d="M340 150 l4 8 8 4 -8 4 -4 8 -4 -8 -8 -4 8 -4z" fill="#fff" opacity=".7"/>
-          </g>
-
-        </svg>
-        <div class="art-card">
-          <span class="dot"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"/><path d="M9.5 21.5v-6h5v6"/></svg></span>
-          <div><b>Washes from $60</b><span>Home or work, 7 days a week</span></div>
-        </div>
-      </div>
+      <svg class="car" viewBox="0 0 560 300" role="img" aria-label="Drawing of a gleaming car">
+        <g class="streaks" stroke-width="3">
+          <line x1="10" y1="140" x2="120" y2="140"/><line x1="30" y1="170" x2="110" y2="170"/><line x1="0" y1="200" x2="90" y2="200"/>
+        </g>
+        <path d="M70 210 C70 186 86 176 112 172 L176 164 C204 128 238 106 300 104 C352 102 392 118 430 160 L486 168 C516 172 532 186 532 208 L532 222 L70 222 Z" fill="#1C2027" stroke="#3A414C" stroke-width="2"/>
+        <path d="M196 162 C222 132 252 118 298 117 C340 116 370 128 400 160 Z" fill="#0D0F12" stroke="#3A414C" stroke-width="2"/>
+        <line x1="300" y1="117" x2="296" y2="162" stroke="#3A414C" stroke-width="2"/>
+        <path d="M120 186 L500 186" stroke="#FFC531" stroke-width="2" opacity=".7"/>
+        <path d="M212 150 C236 132 262 124 290 123" stroke="#F2F4F7" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55"/>
+        <rect x="500" y="180" width="26" height="8" rx="3" fill="#FFC531"/>
+        <rect x="74" y="184" width="18" height="7" rx="3" fill="#E5484D" opacity=".85"/>
+        <g fill="#0D0F12" stroke="#5D6570" stroke-width="3"><circle cx="166" cy="222" r="34"/><circle cx="436" cy="222" r="34"/></g>
+        <g fill="#2A3039"><circle cx="166" cy="222" r="15"/><circle cx="436" cy="222" r="15"/></g>
+        <ellipse cx="300" cy="262" rx="250" ry="10" fill="#000" opacity=".5"/>
+        <g fill="#FFC531"><path d="M470 70l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/><path d="M226 66l2.5 7.5 7.5 2.5-7.5 2.5-2.5 7.5-2.5-7.5-7.5-2.5 7.5-2.5z" opacity=".7"/></g>
+      </svg>
+    </div>
+    <div class="proof">
+      <ul class="wrap">
+        <li><b><span class="star">★</span> 4.9</b><span>112 Google reviews</span></li>
+        <li><b>100%</b><span>Mobile, we come to you</span></li>
+        <li><b>7 days</b><span>8 AM to 6 PM</span></li>
+        <li><b>Water + power</b><span>We bring our own</span></li>
+      </ul>
     </div>
   </section>
 
-  <div class="strip">
-    <div class="wrap strip-grid">
-      <div><b>4.9 ★</b><span>Google rating</span></div><div><b>112</b><span>Google reviews</span></div><div><b>100%</b><span>Mobile</span></div><div><b>7 days</b><span>Every day</span></div>
-    </div>
-  </div>
-
-  <section id="services">
+  <section class="block" id="packages" aria-labelledby="pk-h">
     <div class="wrap">
-      <div class="eyebrow">Services</div>
-      <h2>Packages and prices</h2>
-      <p class="lead">Pick a package and a time. We handle the rest.</p>
-      <div class="cards">
-        
-        <div class="card">
-          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
-          <h3>Exterior wash · $60</h3>
-          <p>Hand wash, towel dry, wheels and tires.</p>
-        </div>
-        
-        <div class="card">
-          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h6a2 2 0 0 1 2 2v8H7z"/><path d="M5 13h12l2 4H5zM7 17v4M17 17v4"/></svg></div>
-          <h3>Interior detail · $120</h3>
-          <p>Vacuum, wipe-down, windows and a fresh finish inside.</p>
-        </div>
-        
-        <div class="card">
-          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M3 17v-4l2-5a2 2 0 0 1 1.9-1.4h10.2A2 2 0 0 1 19 8l2 5v4"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M3 12h18"/></svg></div>
-          <h3>Full detail · $180</h3>
-          <p>Inside and out, plus a spray wax to protect the paint.</p>
-        </div>
-        
+      <div class="head">
+        <div><p class="kicker">Packages</p><h2 class="display" id="pk-h">Pick your level of clean</h2></div>
+        <p>Flat prices for cars. SUVs and trucks are $20 more. No surprises when we're done.</p>
       </div>
+      <div class="pk">
+        <article>
+          <h3>Exterior</h3>
+          <p class="price">$60</p>
+          <p class="time">About 1 hour</p>
+          <ul>
+            <li>Hand wash and towel dry</li>
+            <li>Wheels, tires and tire shine</li>
+            <li>Exterior windows</li>
+            <li class="no">Interior vacuum</li>
+            <li class="no">Spray wax</li>
+          </ul>
+          <a class="btn btn-line" href="#book" data-pick="Exterior">Book exterior</a>
+        </article>
+        <article class="top">
+          <span class="badge">Most booked</span>
+          <h3>Full detail</h3>
+          <p class="price">$180</p>
+          <p class="time">About 3 hours</p>
+          <ul>
+            <li>Everything in Exterior and Interior</li>
+            <li>Spray wax to protect the paint</li>
+            <li>Door jambs and trim dressed</li>
+            <li>Seats and mats deep cleaned</li>
+            <li>Fresh, clean finish inside</li>
+          </ul>
+          <a class="btn btn-solid" href="#book" data-pick="Full detail">Book full detail</a>
+        </article>
+        <article>
+          <h3>Interior</h3>
+          <p class="price">$120</p>
+          <p class="time">About 2 hours</p>
+          <ul>
+            <li>Full vacuum, seats and trunk</li>
+            <li>Dash, console and doors wiped</li>
+            <li>Inside windows and mirrors</li>
+            <li>Mats cleaned</li>
+            <li class="no">Exterior wash</li>
+          </ul>
+          <a class="btn btn-line" href="#book" data-pick="Interior">Book interior</a>
+        </article>
+      </div>
+      <p class="pk-note">Fleet or work vehicles? Ask about weekly and monthly service.</p>
     </div>
   </section>
 
-  <section id="how" class="steps-sec">
+  <section class="block" id="addons" aria-labelledby="ad-h" style="padding-top:0">
     <div class="wrap">
-      <div class="eyebrow">How it works</div>
-      <h2>Three easy steps</h2>
-      <div class="steps">
-        <div class="step"><h3>Book online</h3><p>Pick a package and a time, and tell us where the car will be.</p></div><div class="step"><h3>We pull up</h3><p>We arrive with everything we need, including water and power.</p></div><div class="step"><h3>Drive off clean</h3><p>Inspect the work, pay from your phone, and you&#39;re done.</p></div>
+      <div class="head">
+        <div><p class="kicker">Add-ons</p><h2 class="display" id="ad-h">Make it yours</h2></div>
+        <p>Add any of these to a package when you book.</p>
+      </div>
+      <div class="addons">
+        <div><b>Pet hair removal</b><span>+$30</span></div>
+        <div><b>Odor treatment</b><span>+$35</span></div>
+        <div><b>Engine bay clean</b><span>+$40</span></div>
+        <div><b>Clay bar treatment</b><span>+$45</span></div>
+        <div><b>Headlight restore</b><span>+$50</span></div>
+        <div><b>Ceramic spray sealant</b><span>+$60</span></div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="block" id="how" aria-labelledby="how-h" style="padding-top:0">
     <div class="wrap">
-      <div class="eyebrow">Who we serve</div>
-      <h2>Wherever your car is parked</h2>
-      <div class="who">
-        <div><b>At home</b><span>Your driveway or parking spot.</span></div><div><b>At work</b><span>Done while you&#39;re on the clock.</span></div><div><b>Families</b><span>SUVs and minivans that see a lot.</span></div><div><b>Fleets</b><span>Work trucks and company cars.</span></div>
+      <div class="head">
+        <div><p class="kicker">How it works</p><h2 class="display" id="how-h">Three steps. Zero hassle.</h2></div>
       </div>
+      <ol class="steps">
+        <li><h3>Pick a package</h3><p>Choose your package, add-ons and a time, and tell us where the car will be.</p></li>
+        <li><h3>We pull up</h3><p>We arrive with everything we need. You don't even have to be outside.</p></li>
+        <li><h3>Drive off clean</h3><p>Check the work, pay from your phone, and you're on your way.</p></li>
+      </ol>
     </div>
   </section>
 
-  <section id="about" style="padding-top:0">
-    <div class="wrap about">
-      <div class="portrait">
-        <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2l2-2h6l2 2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></svg>
-        <div class="ph">Before-and-after photos go here</div>
+  <section class="block" aria-labelledby="ba-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="kicker">Results</p><h2 class="display" id="ba-h">Before &amp; after</h2></div>
       </div>
+      <div class="ba">
+        <div>Before photo</div>
+        <div class="after">After photo</div>
+      </div>
+      <p class="ba-note">On a real site, this shows the business's own before-and-after photos.</p>
+    </div>
+  </section>
+
+  <section class="block" id="book" aria-labelledby="area-h" style="padding-top:0">
+    <div class="wrap area">
       <div>
-        <div class="eyebrow">About</div>
-        <h2>Meet the owner</h2>
-        <p>This is where the owner&#39;s story goes: how they got started, what they care about, and why customers keep coming back.</p><p>Every Topsail site is written around the real business, with real before-and-after photos.</p>
-        <div class="facts"><span>Fully mobile</span><span>Locally owned</span><span>Insured</span></div>
+        <p class="kicker">Area &amp; hours</p>
+        <h2 class="display" id="area-h">We come to you</h2>
+        <p>Home, office or apartment lot. If there's room to work around the car, we can detail it.</p>
+        <ul class="towns">
+          <li>Downtown</li><li>Northside</li><li>Lakeview</li><li>Westfield</li><li>Airport area</li><li>Surrounding towns</li>
+        </ul>
+        <div class="hours">
+          <div><b>Every day</b><span>8:00 AM – 6:00 PM</span></div>
+          <div><b>Booking</b><span>Online, by call or by text</span></div>
+          <div><b>Phone</b><span><a href="tel:5550100187">(555) 010-0187</a></span></div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="reviews">
-    <div class="wrap">
-      <div class="big-rating">4.9</div>
-      <div class="stars">★★★★★</div>
-      <h2>Rated 4.9 by customers on Google</h2>
-      <p>112 Google reviews and counting. See what customers say.</p>
-      <a class="btn btn-light" href="https://topsailsolutions.com/#examples" target="_blank" rel="noopener">Read the reviews on Google</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <div class="eyebrow">Hours &amp; contact</div>
-      <h2>Book your next detail</h2>
-      <div class="two">
-        <div class="panel">
-          <h3>Hours</h3>
-          <table class="hours">
-            <tr><td>Every day</td><td>8:00 AM – 6:00 PM</td></tr><tr><td>Booking</td><td>Online or by text</td></tr>
-          </table>
-          <p class="area"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Serving the metro area and surrounding towns.</p>
+      <div class="book">
+        <h3>Book a detail</h3>
+        <p class="sub">Pick your vehicle, package and a time. You'll get a text to confirm.</p>
+        <label id="veh-l">Vehicle</label>
+        <div class="seg" role="group" aria-labelledby="veh-l" data-group="veh">
+          <button type="button" aria-pressed="true" data-add="0">Car</button>
+          <button type="button" aria-pressed="false" data-add="20">SUV</button>
+          <button type="button" aria-pressed="false" data-add="20">Truck</button>
         </div>
-        <div class="panel">
-          <h3>Book or ask a question</h3>
-          <div class="contact-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> <a href="tel:+15550100187">(555) 010-0187</a></div>
-          <div class="contact-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9.5" r="2.5"/></svg> <span>Fully mobile: we come to your home or job</span></div>
-          <div class="book-box">
-            <b>Pick a time online</b>
-            <span>Choose a day, and you&#39;ll get a text to confirm.</span>
-            <div class="slots" id="slots">
-              <button type="button">Tomorrow 9:00 AM</button><button type="button">Tomorrow 1:30 PM</button><button type="button">Fri 10:00 AM</button><button type="button">Sat 8:30 AM</button>
-            </div>
-            <div class="note" id="note">Preview only: online booking turns on when the site goes live.</div>
-          </div>
+        <label id="pk-l">Package</label>
+        <div class="seg" role="group" aria-labelledby="pk-l" data-group="pk">
+          <button type="button" aria-pressed="false" data-price="60" data-name="Exterior">Exterior</button>
+          <button type="button" aria-pressed="false" data-price="120" data-name="Interior">Interior</button>
+          <button type="button" aria-pressed="true" data-price="180" data-name="Full detail">Full</button>
         </div>
+        <label id="time-l">Time</label>
+        <div class="slots" role="group" aria-labelledby="time-l" data-group="time">
+          <button type="button" aria-pressed="false">Tomorrow 9:00 AM</button>
+          <button type="button" aria-pressed="false">Tomorrow 1:30 PM</button>
+          <button type="button" aria-pressed="false">Fri 10:00 AM</button>
+          <button type="button" aria-pressed="false">Sat 8:30 AM</button>
+        </div>
+        <div class="total"><span>Estimated total</span><b id="total">$180</b></div>
+        <button class="btn btn-solid" type="button" id="go">Request this time</button>
+        <div class="note" id="note" role="status">Preview only: online booking turns on when the site goes live.</div>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap foot">
+  <div class="wrap">
     <span>© 2026 Northstar Mobile Detailing · Sample business</span>
     <span>Sample website by Topsail Solutions · <a href="https://topsailsolutions.com/#examples">topsailsolutions.com</a></span>
   </div>
 </footer>
 
-<div class="call-bar">
-  <a class="btn btn-primary" href="tel:+15550100187"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Call</a>
-  <a class="btn btn-ghost" href="#contact"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></svg> Book</a>
+<div class="bar">
+  <a class="btn btn-line" href="tel:5550100187">Call</a>
+  <a class="btn btn-solid" href="#book">Book</a>
 </div>
 
 <script>
-  document.querySelectorAll('#slots button').forEach(function(b){
-    b.addEventListener('click', function(){
-      document.querySelectorAll('#slots button').forEach(function(x){x.classList.remove('on')});
-      b.classList.add('on');
-      document.getElementById('note').classList.add('show');
+  (function () {
+    function pick(group, btn) {
+      group.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+    }
+    function total() {
+      var veh = document.querySelector('[data-group="veh"] [aria-pressed="true"]');
+      var pk = document.querySelector('[data-group="pk"] [aria-pressed="true"]');
+      document.getElementById('total').textContent = '$' + (Number(pk.dataset.price) + Number(veh.dataset.add));
+    }
+    document.querySelectorAll('[data-group]').forEach(function (g) {
+      g.addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        pick(g, b); total();
+        if (g.dataset.group === 'time') document.getElementById('note').classList.add('show');
+      });
     });
-  });
+    document.getElementById('go').addEventListener('click', function () { document.getElementById('note').classList.add('show'); });
+    document.querySelectorAll('[data-pick]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var g = document.querySelector('[data-group="pk"]');
+        var b = g.querySelector('[data-name="' + a.dataset.pick + '"]');
+        if (b) { pick(g, b); total(); }
+      });
+    });
+  })();
 </script>
 </body>
 </html>
