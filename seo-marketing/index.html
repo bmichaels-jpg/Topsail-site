@@ -114,7 +114,7 @@
     --paper: #FFFFFF;
     --mist: #EEF3F8;
     --line: #D6DFE9;
-    /* tube-top colours: the same ones the system uses for visit status */
+    /* accent colours: one per service or step */
     --cap-gold: #D9A92B;
     --cap-lav: #8C78C4;
     --cap-royal: #3466C2;
@@ -197,8 +197,7 @@
   .stops .sub { display: block; font-size: 12.5px; color: var(--muted); font-weight: 400; }
   .stops .st { display: block; font-size: 12px; color: var(--ink); font-weight: 500; margin-top: 2px; }
   .stops li.done { opacity: .6; }
-  .cap { width: 13px; height: 17px; border-radius: 4px 4px 3px 3px; background: var(--c); position: relative; box-shadow: inset 0 -5px 0 rgba(0,0,0,.18); }
-  .cap::after { content: ""; position: absolute; left: 3px; right: 3px; bottom: -6px; height: 6px; border-radius: 0 0 3px 3px; background: #E3E9EF; }
+  .cap { width: 12px; height: 12px; border-radius: 50%; background: var(--c); }
   .demo-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 14px; }
 
   /* who it's for */
@@ -224,9 +223,7 @@
   .svc header p { margin-top: 16px; }
   .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .svc-card { border: 1px solid var(--line); border-radius: 22px; padding: 30px 28px 28px; display: flex; flex-direction: column; background: #fff; }
-  .svc-card .tube { width: 24px; height: 58px; margin-bottom: 20px; }
-  .svc-card .tube .top-c { height: 21px; }
-  .svc-card .tube .glass { top: 19px; }
+  .svc-card .tube { margin-bottom: 20px; }
   .svc-card h3 { font-size: 27px; font-weight: 600; margin-bottom: 10px; }
   .svc-card .what { color: var(--muted); margin-bottom: 18px; }
   .svc-card ul { list-style: none; margin: 0 0 22px; padding: 0; }
@@ -325,11 +322,11 @@
   .life header { max-width: 40em; margin-bottom: 56px; }
   .life header p { margin-top: 16px; }
   .rack { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; }
-  .rack::before { content: ""; position: absolute; left: 4%; right: 4%; top: 36px; height: 2px; background: var(--line); }
+  .rack::before { content: ""; position: absolute; left: 4%; right: 4%; top: 20px; height: 2px; background: var(--line); }
   .rack li { position: relative; padding: 0 12px; }
-  .tube { width: 30px; height: 74px; margin: 0 0 22px; position: relative; }
-  .tube .top-c { position: absolute; inset: 0 0 auto 0; height: 26px; border-radius: 7px 7px 4px 4px; background: var(--c); box-shadow: inset 0 -7px 0 rgba(0,0,0,.18); }
-  .tube .glass { position: absolute; left: 4px; right: 4px; top: 24px; bottom: 0; border-radius: 0 0 13px 13px; background: #fff; border: 2px solid var(--line); border-top: none; }
+  .tube { width: 40px; height: 40px; margin: 0 0 22px; position: relative; border-radius: 12px; background: #EEF3F8; background: color-mix(in srgb, var(--c) 16%, #fff); }
+  .tube .top-c { position: absolute; inset: 12px; border-radius: 50%; background: var(--c); }
+  .tube .glass { display: none; }
   .rack h3 { font-size: 21px; margin-bottom: 6px; }
   .rack p { font-size: 15px; color: var(--muted); line-height: 1.5; }
 
@@ -404,8 +401,8 @@
     .top img { height: 28px; }
     .pain ul, .start ol, .yours ul, .feat dl { grid-template-columns: 1fr; }
     .rack { grid-template-columns: 1fr; row-gap: 0; }
-    .rack li { display: grid; grid-template-columns: 30px 1fr; gap: 18px; padding: 0 0 26px; }
-    .tube { margin: 0; height: 60px; }
+    .rack li { display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 0 0 26px; }
+    .tube { margin: 0; }
     .phone { width: 100%; max-width: 330px; }
     .lede { font-size: 18px; }
     .pain, .life, .feat, .yours, .start, .call { padding-top: 64px; padding-bottom: 64px; }

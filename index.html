@@ -37,8 +37,8 @@
     "jobTitle": "Founder"
   },
   "knowsAbout": [
-    "Mobile phlebotomy scheduling",
-    "Specimen tracking",
+    "Appointment and field service scheduling",
+    "Mobile health operations",
     "Google review automation",
     "Google Workspace automation",
     "Google Apps Script",
@@ -57,7 +57,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Operations systems",
-          "description": "Bookings, confirmations, reminders, routes and lab tracking for mobile phlebotomy, IV, specimen courier and testing businesses.",
+          "description": "Bookings, dispatch, team routes, job tracking and dashboards for service businesses, including mobile health.",
           "url": "https://topsailsolutions.com/operations-systems/"
         }
       },
@@ -116,7 +116,7 @@
     --paper: #FFFFFF;
     --mist: #EEF3F8;
     --line: #D6DFE9;
-    /* tube-top colours: the same ones the system uses for visit status */
+    /* accent colours: one per service or step */
     --cap-gold: #D9A92B;
     --cap-lav: #8C78C4;
     --cap-royal: #3466C2;
@@ -199,8 +199,7 @@
   .stops .sub { display: block; font-size: 12.5px; color: var(--muted); font-weight: 400; }
   .stops .st { display: block; font-size: 12px; color: var(--ink); font-weight: 500; margin-top: 2px; }
   .stops li.done { opacity: .6; }
-  .cap { width: 13px; height: 17px; border-radius: 4px 4px 3px 3px; background: var(--c); position: relative; box-shadow: inset 0 -5px 0 rgba(0,0,0,.18); }
-  .cap::after { content: ""; position: absolute; left: 3px; right: 3px; bottom: -6px; height: 6px; border-radius: 0 0 3px 3px; background: #E3E9EF; }
+  .cap { width: 12px; height: 12px; border-radius: 50%; background: var(--c); }
   .demo-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 14px; }
 
   /* who it's for */
@@ -226,9 +225,7 @@
   .svc header p { margin-top: 16px; }
   .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .svc-card { border: 1px solid var(--line); border-radius: 22px; padding: 30px 28px 28px; display: flex; flex-direction: column; background: #fff; }
-  .svc-card .tube { width: 24px; height: 58px; margin-bottom: 20px; }
-  .svc-card .tube .top-c { height: 21px; }
-  .svc-card .tube .glass { top: 19px; }
+  .svc-card .tube { margin-bottom: 20px; }
   .svc-card h3 { font-size: 27px; font-weight: 600; margin-bottom: 10px; }
   .svc-card .what { color: var(--muted); margin-bottom: 18px; }
   .svc-card ul { list-style: none; margin: 0 0 22px; padding: 0; }
@@ -327,11 +324,11 @@
   .life header { max-width: 40em; margin-bottom: 56px; }
   .life header p { margin-top: 16px; }
   .rack { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; }
-  .rack::before { content: ""; position: absolute; left: 4%; right: 4%; top: 36px; height: 2px; background: var(--line); }
+  .rack::before { content: ""; position: absolute; left: 4%; right: 4%; top: 20px; height: 2px; background: var(--line); }
   .rack li { position: relative; padding: 0 12px; }
-  .tube { width: 30px; height: 74px; margin: 0 0 22px; position: relative; }
-  .tube .top-c { position: absolute; inset: 0 0 auto 0; height: 26px; border-radius: 7px 7px 4px 4px; background: var(--c); box-shadow: inset 0 -7px 0 rgba(0,0,0,.18); }
-  .tube .glass { position: absolute; left: 4px; right: 4px; top: 24px; bottom: 0; border-radius: 0 0 13px 13px; background: #fff; border: 2px solid var(--line); border-top: none; }
+  .tube { width: 40px; height: 40px; margin: 0 0 22px; position: relative; border-radius: 12px; background: #EEF3F8; background: color-mix(in srgb, var(--c) 16%, #fff); }
+  .tube .top-c { position: absolute; inset: 12px; border-radius: 50%; background: var(--c); }
+  .tube .glass { display: none; }
   .rack h3 { font-size: 21px; margin-bottom: 6px; }
   .rack p { font-size: 15px; color: var(--muted); line-height: 1.5; }
 
@@ -406,8 +403,8 @@
     .top img { height: 28px; }
     .pain ul, .start ol, .yours ul, .feat dl { grid-template-columns: 1fr; }
     .rack { grid-template-columns: 1fr; row-gap: 0; }
-    .rack li { display: grid; grid-template-columns: 30px 1fr; gap: 18px; padding: 0 0 26px; }
-    .tube { margin: 0; height: 60px; }
+    .rack li { display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 0 0 26px; }
+    .tube { margin: 0; }
     .phone { width: 100%; max-width: 330px; }
     .lede { font-size: 18px; }
     .pain, .life, .feat, .yours, .start, .call { padding-top: 64px; padding-bottom: 64px; }
@@ -426,7 +423,6 @@
         <a href="#services">Services</a>
         <a href="#examples">Examples</a>
         <a href="#visit">How it works</a>
-        <a href="#included">What's included</a>
         <a href="#about">About</a>
         <a class="btn btn-solid" href="https://calendar.app.google/v4ggiAKEeKAygCyT6" target="_blank" rel="noopener">Book a call</a>
       </nav>
@@ -437,7 +433,6 @@
     <a href="#services">Services</a>
     <a href="#examples">Examples</a>
     <a href="#visit">How it works</a>
-    <a href="#included">What's included</a>
     <a href="#tools">Built on Google</a>
     <a href="#start">How we get started</a>
     <a href="#about">About</a>
@@ -458,16 +453,16 @@
         <p class="who">Runs in your own Google account. No new software for your team to learn.</p>
       </div>
 
-      <div class="phone" role="img" aria-label="A team member's phone showing today's four stops, with a button to start the route in Google Maps">
+      <div class="phone" role="img" aria-label="An owner's phone showing this morning's updates: routes sent to the team, a new lead with a reply ready, a new Google review and a paid invoice">
         <div class="screen" aria-hidden="true">
-          <div class="hello">Good morning, Marcus</div>
-          <div class="sum"><b>4 visits</b> today, <b>3 left</b>. Next: <b>8:30 AM</b>, Dorothy Willis.</div>
-          <span class="route">Route for the rest of today</span>
+          <div class="hello">Good morning, Jasmine</div>
+          <div class="sum"><b>6 jobs</b> today, <b>2 new leads</b> and <b>1 new review</b> since last night.</div>
+          <span class="route">Approve 2 lead replies</span>
           <ul class="stops">
-            <li class="done"><span class="t">7:00</span><span class="cap" style="--c:var(--cap-green)"></span><span class="nm">Samuel Ortiz<span class="sub">Blood draw, fasting</span><span class="st">Collected</span></span></li>
-            <li><span class="t">8:30</span><span class="cap" style="--c:var(--cap-royal)"></span><span class="nm">Dorothy Willis<span class="sub">Desert Palms Assisted Living</span><span class="st">On the way</span></span></li>
-            <li><span class="t">8:45</span><span class="cap" style="--c:var(--cap-lav)"></span><span class="nm">Harold Benson<span class="sub">Desert Palms Assisted Living</span><span class="st">Assigned</span></span></li>
-            <li><span class="t">11:00</span><span class="cap" style="--c:var(--cap-lav)"></span><span class="nm">Priya Raman<span class="sub">IV hydration</span><span class="st">Assigned</span></span></li>
+            <li class="done"><span class="t">6:00</span><span class="cap" style="--c:var(--cap-royal)"></span><span class="nm">Routes sent<span class="sub">3 team members, 6 jobs</span><span class="st">Done</span></span></li>
+            <li><span class="t">6:42</span><span class="cap" style="--c:var(--cap-lav)"></span><span class="nm">New lead: Tanya Brooks<span class="sub">Deep clean, this Saturday</span><span class="st">Reply ready</span></span></li>
+            <li><span class="t">7:15</span><span class="cap" style="--c:var(--cap-teal)"></span><span class="nm">New 5-star review<span class="sub">Maria G. on Google</span><span class="st">Reply drafted</span></span></li>
+            <li><span class="t">7:30</span><span class="cap" style="--c:var(--cap-green)"></span><span class="nm">Invoice #1042 paid<span class="sub">After an automatic reminder</span><span class="st">Logged</span></span></li>
           </ul>
           <p class="demo-note">Demo data</p>
         </div>
@@ -479,11 +474,11 @@
     <div class="wrap">
       <h2 id="for-h">Built for</h2>
       <ul>
-        <li>Mobile health &amp; IV</li>
-        <li>Testing &amp; couriers</li>
+        <li>Home services</li>
         <li>Wellness studios</li>
         <li>Salons &amp; spas</li>
-        <li>Home services</li>
+        <li>Cleaning &amp; detailing</li>
+        <li>Mobile health</li>
       </ul>
     </div>
   </section>
@@ -498,14 +493,14 @@
         <article class="svc-card" style="--c:var(--cap-royal)">
           <div class="tube" style="--c:var(--cap-royal)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
           <h3>Operations systems</h3>
-          <p class="what">Your schedule, team, routes and lab tracking in one system that runs in your own Google account.</p>
+          <p class="what">Your schedule, team, routes and jobs in one system that runs in your own Google account.</p>
           <ul>
             <li>Bookings, confirmations and reminders</li>
             <li>Each team member's route on their phone</li>
-            <li>Lab orders, drop-offs and results tracked</li>
+            <li>Every job tracked from booked to done</li>
             <li>A live dashboard and owner insights</li>
           </ul>
-          <p class="fit"><b>Built for</b> mobile phlebotomy, IV, specimen courier and testing businesses.</p>
+          <p class="fit"><b>Built for</b> mobile teams, field services and busy appointment books.</p>
           <p class="links2"><a class="more" href="/operations-systems/">Learn more &rarr;</a><a class="more" href="#ex-ops">See an example</a></p>
         </article>
         <article class="svc-card" style="--c:var(--cap-green)">
@@ -580,26 +575,26 @@
         <div class="txt">
           <div class="tag" style="--c:var(--cap-royal)"><i></i>Operations systems</div>
           <h3>Your morning check, done before you're up</h3>
-          <p>Every morning the system looks at every visit and tells you what needs attention, so problems get fixed before a patient or ordering office has to call you.</p>
+          <p>Every morning the system looks at every job and tells you what needs attention, so problems get fixed before a customer has to call you.</p>
           <ul>
-            <li><b>Visits today</b> and who's assigned to each one</li>
-            <li><b>Alerts</b> for late results, missing lab orders and unassigned visits</li>
+            <li><b>Jobs today</b> and who's assigned to each one</li>
+            <li><b>Alerts</b> for open quotes, unpaid deposits, missing paperwork and unassigned jobs</li>
             <li><b>Routes</b> sent to each team member's phone</li>
           </ul>
         </div>
         <div>
-          <div class="mock" role="img" aria-label="Example dashboard with today's visits and four alerts, using demo data">
+          <div class="mock" role="img" aria-label="Example dashboard with today's jobs and four alerts, using demo data">
             <div class="bar" aria-hidden="true"><b>Good morning</b><span>Tuesday, 6:00 AM</span></div>
             <div class="kpis" aria-hidden="true">
-              <div><b>14</b><span>Visits today</span></div>
+              <div><b>14</b><span>Jobs today</span></div>
               <div><b>2</b><span>Not assigned</span></div>
               <div><b>4</b><span>Open alerts</span></div>
             </div>
             <ul class="alerts" aria-hidden="true">
-              <li><span class="lvl high">High</span><span>Results 2 days late at Labcorp<small>Robert Hale · tracking number on file</small></span></li>
-              <li><span class="lvl high">High</span><span>No lab order yet for Thursday's draw<small>Angela Brooks · reminder sent to her provider</small></span></li>
-              <li><span class="lvl med">Medium</span><span>Specimen collected, drop-off not logged<small>Luis Moreno · collected yesterday 9:40 AM</small></span></li>
-              <li><span class="lvl low">Low</span><span>2 visits tomorrow have no one assigned<small>Pick who goes from the Visits tab</small></span></li>
+              <li><span class="lvl high">High</span><span>No deposit yet for Thursday's job<small>Robert Hale · reminder sent yesterday</small></span></li>
+              <li><span class="lvl high">High</span><span>Quote sent 3 days ago, no reply<small>Angela Brooks · follow-up ready to send</small></span></li>
+              <li><span class="lvl med">Medium</span><span>Job done, photos and notes not logged<small>Luis Moreno · finished yesterday 4:40 PM</small></span></li>
+              <li><span class="lvl low">Low</span><span>2 jobs tomorrow have no one assigned<small>Pick who goes from the Jobs tab</small></span></li>
             </ul>
           </div>
           <p class="demo-tag">Demo data</p>
@@ -697,13 +692,12 @@
 
   <section class="pain" aria-labelledby="pain-h">
     <div class="wrap">
-      <p class="eyebrow">Operations systems, up close</p>
-      <h2 id="pain-h">Your schedule, orders and team, all in one place.</h2>
-      <p class="pain-intro">Even with a booking tool, the work around each visit usually still lands on you. Topsail brings it together and handles the follow-up.</p>
+      <h2 id="pain-h">Where small businesses lose time and customers.</h2>
+      <p class="pain-intro">Most owners don't need more software. They need the follow-up to happen on its own. Topsail sets that up in the Google tools you already have.</p>
       <ul>
-        <li><h3>Confirmations and reminders</h3><p>Confirming times, sending reminders and answering "are you still coming?" eats hours every week.</p></li>
-        <li><h3>Chasing orders and results</h3><p>A missing lab order or a result nobody followed up on is how patients and referring offices lose trust.</p></li>
-        <li><h3>Who goes where</h3><p>Every morning someone works out the routes, then texts each staff member their stops and details.</p></li>
+        <li><h3>Leads wait too long</h3><p>A new inquiry sits for hours while you're on a job, and they book whoever answered first.</p></li>
+        <li><h3>The day runs on texts</h3><p>Bookings, reminders and who goes where live in your phone and your head, so things slip.</p></li>
+        <li><h3>Nobody can find you</h3><p>Customers search on Google, and a competitor with more reviews and a better website shows up first.</p></li>
       </ul>
     </div>
   </section>
@@ -711,16 +705,16 @@
   <section class="life" id="visit" aria-labelledby="life-h">
     <div class="wrap">
       <header>
-        <h2 id="life-h">One visit, start to finish</h2>
-        <p class="lede">Every visit moves through the same steps. The system does the follow-up at each one, so your team only does the parts that need a person.</p>
+        <h2 id="life-h">One job, start to finish</h2>
+        <p class="lede">Every job moves through the same steps. Topsail handles the follow-up at each one, so you only do the parts that need a person.</p>
       </header>
       <ol class="rack">
-        <li><div class="tube" style="--c:var(--cap-gold)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Booked</h3><p>The request comes in from your website or booking form. The patient gets a confirmation right away.</p></div></li>
-        <li><div class="tube" style="--c:var(--cap-lav)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Assigned</h3><p>You pick who goes. They're notified, and the patient gets a reminder the day before.</p></div></li>
-        <li><div class="tube" style="--c:var(--cap-royal)"><span class="top-c"></span><span class="glass"></span></div><div><h3>On the way</h3><p>One tap on your team member's phone sends the patient an "on my way" message.</p></div></li>
-        <li><div class="tube" style="--c:var(--cap-green)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Collected</h3><p>The collection time is logged. If the draw doesn't happen, a new try is booked automatically.</p></div></li>
-        <li><div class="tube" style="--c:var(--cap-gray)"><span class="top-c"></span><span class="glass"></span></div><div><h3>At the lab</h3><p>The drop-off and tracking number are recorded, along with when results are due.</p></div></li>
-        <li><div class="tube" style="--c:var(--cap-teal)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Results in</h3><p>If results run late, you get a heads-up before the ordering office calls you.</p></div></li>
+        <li><div class="tube" style="--c:var(--cap-lav)"><span class="top-c"></span><span class="glass"></span></div><div><h3>New lead</h3><p>An inquiry comes in from your website or Google. A reply in your voice is ready within minutes.</p></div></li>
+        <li><div class="tube" style="--c:var(--cap-gold)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Booked</h3><p>The job lands on your schedule, and the customer gets a confirmation right away.</p></div></li>
+        <li><div class="tube" style="--c:var(--cap-royal)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Assigned</h3><p>You pick who goes. They're notified, and the customer gets a reminder the day before.</p></div></li>
+        <li><div class="tube" style="--c:var(--cap-green)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Done</h3><p>Your team member marks it done. If the job can't happen, a new time gets booked.</p></div></li>
+        <li><div class="tube" style="--c:var(--cap-gray)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Paid</h3><p>The invoice goes out, and a polite reminder follows if it isn't paid.</p></div></li>
+        <li><div class="tube" style="--c:var(--cap-teal)"><span class="top-c"></span><span class="glass"></span></div><div><h3>Reviewed</h3><p>A couple of hours later, a review request goes out. Unhappy replies come to you, not Google.</p></div></li>
       </ol>
     </div>
   </section>
@@ -728,17 +722,18 @@
   <section class="feat" id="included" aria-labelledby="feat-h">
     <div class="wrap">
       <div class="intro">
-        <h2 id="feat-h">What's included</h2>
-        <p>Everything you need to run your business, in one place, set up with your services, prices, team, hours and service area.</p>
+        <h2 id="feat-h">Inside an operations system</h2>
+        <p>Set up with your services, prices, team, hours and service area. Here's what it handles day to day.</p>
       </div>
       <dl>
         <div><dt>Bookings in one place</dt><dd>Requests from your website, booking tool or phone calls land on one schedule, with confirmations and reminders sent for you.</dd></div>
-        <div><dt>Routes on every phone</dt><dd>Each team member gets their stops by email each morning, with one button to open the whole route in Google Maps.</dd></div>
+        <div><dt>Routes on every phone</dt><dd>Each team member gets their stops each morning, with one button to open the whole route in Google Maps.</dd></div>
         <div><dt>A live dashboard</dt><dd>See the whole day at a glance: who's where, what's late, and what needs attention before it becomes a problem.</dd></div>
-        <div><dt>Missed draws handled</dt><dd>Log why a draw didn't happen. The re-attempt gets booked and the facility or ordering office is told.</dd></div>
-        <div><dt>Facility program</dt><dd>Assisted living and nursing facilities get a status page and a monthly report of every draw for their residents.</dd></div>
-        <div><dt>Owner insights</dt><dd>Revenue, visits, collection rate, busiest days and where your patients come from, updated as you work.</dd></div>
+        <div><dt>Reschedules handled</dt><dd>Log why a job didn't happen. A new time gets booked, and the customer is told.</dd></div>
+        <div><dt>Reports for clients and partners</dt><dd>Repeat clients, property managers or partner facilities get a monthly report of the work you did for them.</dd></div>
+        <div><dt>Owner insights</dt><dd>Revenue, jobs, repeat customers, busiest days and where your customers come from, updated as you work.</dd></div>
       </dl>
+      <div class="also"><h3>For mobile health businesses</h3><p>Where Topsail started. The system also tracks lab orders, specimen drop-offs and results, flags late results, and runs a facility program for assisted living and nursing homes. <a href="/operations-systems/">More on operations systems &rarr;</a></p></div>
     </div>
   </section>
 
@@ -746,10 +741,10 @@
     <div class="wrap">
       <h2 id="yours-h">Built on tools you already have</h2>
       <ul>
-        <li><h3>Your Google account</h3><p>The system runs in a Google Sheet that you own. Your schedule and customer details stay in your account, not ours.</p></li>
-        <li><h3>Nothing new to learn</h3><p>The office works in a spreadsheet and a simple dashboard. Your team uses a link on their phone, with no app to install.</p></li>
+        <li><h3>Your Google account</h3><p>Everything we set up runs in Google Sheets, Gmail and Forms that you own. Your customer details stay in your account, not ours.</p></li>
+        <li><h3>Nothing new to learn</h3><p>You work in Gmail, a spreadsheet and a simple dashboard. Your team uses a link on their phone, with no app to install.</p></li>
         <li><h3>Private links for staff</h3><p>Each staff member gets their own secure link. If a phone is lost, you shut that link off in seconds.</p></li>
-        <li><h3>Shaped around how you work</h3><p>Your services, prices, labs and facilities, set up for you. Changes as you grow are part of the deal.</p></li>
+        <li><h3>Shaped around how you work</h3><p>Your services, prices, team and area, set up for you. Changes as you grow are part of the deal.</p></li>
       </ul>
     </div>
   </section>
@@ -758,9 +753,9 @@
     <div class="wrap">
       <h2 id="start-h">How we get started</h2>
       <ol>
-        <li><h3>Tell us how you work</h3><p>A 10-minute form about your services, team, hours and area. No patient information needed.</p></li>
-        <li><h3>See your own demo</h3><p>On a short call, you see the system set up with your business, not a generic example.</p></li>
-        <li><h3>Go live</h3><p>We set everything up in your Google account and walk your team through it.</p></li>
+        <li><h3>Tell us how you work</h3><p>A 10-minute form about your services, team, hours and area. No customer information needed.</p></li>
+        <li><h3>See your own demo</h3><p>On a short call, you see what we'd set up, shown with your business, not a generic example.</p></li>
+        <li><h3>Go live</h3><p>We set everything up in your accounts and walk you and your team through it.</p></li>
       </ol>
     </div>
   </section>
@@ -770,8 +765,8 @@
       <div>
         <h2 id="about-h">Meet Ben Michaels</h2>
         <p class="role">Founder, Topsail Solutions &middot; Operations &amp; Automation Specialist</p>
-        <p>Ben has built and managed operations systems behind mobile healthcare companies, covering appointments, lab orders, staff schedules and daily routes. That work showed him firsthand where time is lost in a mobile health business, and which tasks can run on their own.</p>
-        <p>He founded Topsail to bring those systems to mobile health businesses, helping owners cut administrative work and grow without adding office staff. Today Topsail also sets up lead replies, Google automations, websites and SEO for small businesses of all kinds, from wellness studios to home services.</p>
+        <p>Ben has spent years building operations systems and Google automations for service businesses, much of it for mobile healthcare companies, where a missed message or a late result costs trust fast. That work showed him where time is lost in a small business, and which tasks can run on their own.</p>
+        <p>He founded Topsail Solutions to bring those systems to small businesses of all kinds, from home services and wellness studios to mobile health, along with the lead replies, websites and SEO that keep new customers coming in.</p>
       </div>
       <div class="sailnote">
         <img src="assets/topsail-mark-white.svg" alt="" class="markbox">
