@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Topsail Solutions | Operations systems, automation and web design</title>
-<meta name="description" content="Topsail builds operations systems for mobile health businesses, automations that run in your own Google account, and clean, fast websites for local service businesses.">
+<title>Topsail Solutions | Operations systems, automation, websites and SEO</title>
+<meta name="description" content="Topsail builds operations systems, Google automations, websites and SEO for small businesses, so you can grow without adding office staff.">
 <meta property="og:title" content="Topsail Solutions">
-<meta property="og:description" content="Operations systems, Google automations and websites for small businesses, so you can grow without adding office staff.">
+<meta property="og:description" content="Operations systems, Google automations, websites and SEO for small businesses, so you can grow without adding office staff.">
 <meta property="og:image" content="https://topsailsolutions.com/assets/og-image.png">
 <meta property="og:url" content="https://topsailsolutions.com/">
 <meta property="og:type" content="website">
@@ -22,9 +22,11 @@
   "url": "https://topsailsolutions.com/",
   "logo": "https://topsailsolutions.com/assets/apple-touch-icon-180.png",
   "image": "https://topsailsolutions.com/assets/og-image.png",
-  "description": "Operations systems for mobile health businesses, automations that run in your own Google account, and clean, fast websites for local service businesses.",
+  "description": "Operations systems, automations that run in your own Google account, websites, and SEO and marketing for small businesses.",
   "email": "bmichaels@topsailsolutions.com",
-  "sameAs": ["https://www.linkedin.com/company/147032042/"],
+  "sameAs": [
+    "https://www.linkedin.com/company/147032042/"
+  ],
   "areaServed": {
     "@type": "Country",
     "name": "United States"
@@ -40,7 +42,10 @@
     "Google review automation",
     "Google Workspace automation",
     "Google Apps Script",
-    "Small business websites"
+    "Small business websites",
+    "Local SEO",
+    "Email marketing",
+    "Social media marketing"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -51,7 +56,8 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Operations systems",
-          "description": "Bookings, confirmations, reminders, routes and lab tracking for mobile phlebotomy, IV, specimen courier and testing businesses."
+          "description": "Bookings, confirmations, reminders, routes and lab tracking for mobile phlebotomy, IV, specimen courier and testing businesses.",
+          "url": "https://topsailsolutions.com/operations-systems/"
         }
       },
       {
@@ -59,7 +65,8 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Automation",
-          "description": "Google review requests, custom Sheets, Gmail and Forms automations, and reports that send themselves."
+          "description": "Google review requests, custom Sheets, Gmail and Forms automations, and reports that send themselves.",
+          "url": "https://topsailsolutions.com/automation/"
         }
       },
       {
@@ -67,7 +74,17 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Web design",
-          "description": "Clean, fast websites for local service businesses, live in about a week, with hosting and small edits included."
+          "description": "Clean, fast websites for local service businesses, live in about a week, with hosting and small edits included.",
+          "url": "https://topsailsolutions.com/websites/"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO and marketing",
+          "description": "Google setup, local SEO, review growth, follow-up emails and social media content for small businesses.",
+          "url": "https://topsailsolutions.com/seo-marketing/"
         }
       }
     ]
@@ -211,6 +228,10 @@
   .svc-card .fit b { color: var(--ink); font-weight: 600; }
   .svc-card .more { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 15px; text-decoration: none; }
   .svc-card .more:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-card .links2 { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 12px; }
+  .svc-card .links2 .more { margin-top: 0; }
+  footer .svcs { display: flex; gap: 20px; flex-wrap: wrap; width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.18); }
   .svc-cta { margin-top: 40px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
   .svc-cta p { color: var(--muted); }
   @media (max-width: 960px) { .svc-grid { grid-template-columns: 1fr; max-width: 560px; } }
@@ -447,7 +468,7 @@
     <div class="wrap">
       <header>
         <h2 id="svc-h">What we do</h2>
-        <p class="lede">Three ways to take work off your plate. Use one, or put them together.</p>
+        <p class="lede">Four ways to take work off your plate. Use one, or put them together.</p>
       </header>
       <div class="svc-grid">
         <article class="svc-card" style="--c:var(--cap-royal)">
@@ -461,7 +482,7 @@
             <li>A live dashboard and owner insights</li>
           </ul>
           <p class="fit"><b>Built for</b> mobile phlebotomy, IV, specimen courier and testing businesses.</p>
-          <a class="more" href="#ex-ops">See an example &rarr;</a>
+          <p class="links2"><a class="more" href="/operations-systems/">Learn more &rarr;</a><a class="more" href="#ex-ops">See an example</a></p>
         </article>
         <article class="svc-card" style="--c:var(--cap-green)">
           <div class="tube" style="--c:var(--cap-green)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
@@ -474,7 +495,7 @@
             <li>Reports and reminders that send themselves</li>
           </ul>
           <p class="fit"><b>Built for</b> any small business that runs on Google.</p>
-          <a class="more" href="#ex-auto">See an example &rarr;</a>
+          <p class="links2"><a class="more" href="/automation/">Learn more &rarr;</a><a class="more" href="#ex-auto">See an example</a></p>
         </article>
         <article class="svc-card" style="--c:var(--cap-gold)">
           <div class="tube" style="--c:var(--cap-gold)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
@@ -487,7 +508,20 @@
             <li>Hosting and small edits included</li>
           </ul>
           <p class="fit"><b>Built for</b> local service businesses, on the domain you own.</p>
-          <a class="more" href="#ex-web">See sample sites &rarr;</a>
+          <p class="links2"><a class="more" href="/websites/">Learn more &rarr;</a><a class="more" href="#ex-web">See sample sites</a></p>
+        </article>
+        <article class="svc-card" style="--c:var(--cap-teal)">
+          <div class="tube" style="--c:var(--cap-teal)" aria-hidden="true"><span class="top-c"></span><span class="glass"></span></div>
+          <h3>SEO &amp; marketing</h3>
+          <p class="what">Get found on Google and keep customers coming back.</p>
+          <ul>
+            <li>Google Search Console and Business Profile setup</li>
+            <li>Local SEO and more Google reviews</li>
+            <li>Follow-up emails and newsletters</li>
+            <li>Social media posts and reels</li>
+          </ul>
+          <p class="fit"><b>Built for</b> any small business that wants more customers from Google.</p>
+          <p class="links2"><a class="more" href="/seo-marketing/">Learn more &rarr;</a></p>
         </article>
       </div>
     </div>
@@ -690,6 +724,7 @@
       <a href="privacy.html">Privacy</a>
       <span>© 2026 Topsail Solutions</span>
     </div>
+    <nav class="svcs" aria-label="Services"><a href="/operations-systems/">Operations systems</a><a href="/automation/">Automation</a><a href="/websites/">Websites</a><a href="/seo-marketing/">SEO &amp; marketing</a></nav>
   </div>
 </footer>
 
